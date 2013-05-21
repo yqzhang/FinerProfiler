@@ -33,6 +33,8 @@
 #include <locale.h>
 #include <err.h>
 
+#include <sched.h>
+
 #include "perf_util.h"
 
 #define MAX_GROUPS 16
@@ -45,10 +47,10 @@
 #define WN 2
 #define SN 3
 
-static int app_state = SN;
-static uint64_t s_cycles = 0;
-static uint64_t s_instructions = 0;
-static double   s_ipc = 0.01;
+static int app_state[2] = {SN, SN};
+static uint64_t s_cycles[2] = {0, 0};
+static uint64_t s_instructions[2] = {0, 0};
+static double   s_ipc[2] = {0.01, 0.01};
 // State Machine for Stable State Detection
 
 typedef struct {
@@ -145,71 +147,62 @@ read_groups(perf_event_desc_t *fds, int num)
 }
 
 static void
-print_counts(perf_event_desc_t *fds, int num)
+print_counts(perf_event_desc_t **all_fds, int *num)
 {
 	double ratio;
 	uint64_t val, delta;
 	int i;
 
-	read_groups(fds, num);
+    int c;
+    perf_event_desc_t *fds = NULL;    
+    for(c=0; c < 2; c++) {
+        fds = all_fds[c];
+	    read_groups(fds, num[c]);
 
-	for(i=0; i < num; i++) {
+	    for(i=0; i < num[c]; i++) {
 
-		val   = perf_scale(fds[i].values);
-		delta = perf_scale_delta(fds[i].values, fds[i].prev_values);
-		ratio = perf_scale_ratio(fds[i].values);
+		    val   = perf_scale(fds[i].values);
+		    delta = perf_scale_delta(fds[i].values, fds[i].prev_values);
+		    ratio = perf_scale_ratio(fds[i].values);
 
-		/* separate groups */
-        /*
-		if (perf_is_group_leader(fds, i))
-			putchar('\n');
-        */
-        
-        /* instruction counts */
-        if (i == 0) {
-            printf ("#instruction - %"PRIu64"\n", val);
-            s_instructions = delta;
-        }
-        else if (i == 1) {
-            s_cycles = delta;
-        }
+            /* instruction counts */
+            if (i == 0) {
+                printf ("#%d: instruction - %"PRIu64"\n", c, val);
+                s_instructions[c] = delta;
+            }
+            else if (i == 1) {
+                s_cycles[c] = delta;
+            }
 
-		if (options.print) {
-            /*
-			printf("%'20"PRIu64" %'20"PRIu64" %s (%.2f%% scaling, ena=%'"PRIu64", run=%'"PRIu64")\n",
-				val,
-				delta,
-				fds[i].name,
-				(1.0-ratio)*100.0,
-				fds[i].values[1],
-				fds[i].values[2]);
-            */
-            printf("\t%s: %"PRIu64"\n", fds[i].name, delta);
-        }
-		else
-			printf("%'20"PRIu64" %s (%.2f%% scaling, ena=%'"PRIu64", run=%'"PRIu64")\n",
-				val,
-				fds[i].name,
-				(1.0-ratio)*100.0,
-				fds[i].values[1],
-				fds[i].values[2]);
+		    if (options.print) {
+                printf("\t%s: %"PRIu64"\n", fds[i].name, delta);
+            }
+		    else {
+			    printf("%'20"PRIu64" %s (%.2f%% scaling, ena=%'"PRIu64", run=%'"PRIu64")\n",
+				    val,
+				    fds[i].name,
+				    (1.0-ratio)*100.0,
+				    fds[i].values[1],
+				    fds[i].values[2]);
+            }
 
-		fds[i].prev_values[0] = fds[i].values[0];
-		fds[i].prev_values[1] = fds[i].values[1];
-		fds[i].prev_values[2] = fds[i].values[2];
-	}
+		    fds[i].prev_values[0] = fds[i].values[0];
+		    fds[i].prev_values[1] = fds[i].values[1];
+		    fds[i].prev_values[2] = fds[i].values[2];
+	    }
     
-    /* State Machine */
-    double n_ipc = (double)s_instructions / (double) s_cycles;
-    if (n_ipc / s_ipc > 1 - EPSILON && n_ipc / s_ipc < 1 + EPSILON) {
-        app_state = (app_state <= SS) ? (app_state) : (app_state - 1);
+        /* State Machine */
+        double n_ipc = (double)s_instructions[c] / (double) s_cycles[c];
+        if (n_ipc / s_ipc[c] > 1 - EPSILON && n_ipc / s_ipc[c] < 1 + EPSILON) {
+            app_state[c] = (app_state[c] <= SS) ? (app_state[c]) : (app_state[c] - 1);
+        }
+        else {
+            app_state[c] = (app_state[c] >= SN) ? (app_state[c]) : (app_state[c] + 1);
+        }
+        s_ipc[c] = n_ipc;
+        /* State Machine */
+        printf("#%d: state - %d\n\n", c, app_state[c]);
     }
-    else {
-        app_state = (app_state >= SN) ? (app_state) : (app_state + 1);
-    }
-    s_ipc = n_ipc;
-    /* State Machine */
-    printf("#state - %d\n\n", app_state);
 }
 
 static void sig_handler(int n)
@@ -220,147 +213,194 @@ static void sig_handler(int n)
 int
 parent(char **arg)
 {
+    perf_event_desc_t **all_fds;
 	perf_event_desc_t *fds = NULL;
-	int status, ret, i, num_fds = 0, grp, group_fd;
-	int ready[2], go[2];
-	char buf;
-	pid_t pid;
+	int status, ret, i, *num_fds, grp, group_fd;
+	int ready[2][2], go[2][2];
+	char buf_0, buf_1;
+	pid_t pid[2];
 
-	go[0] = go[1] = -1;
+	go[0][0] = go[0][1] = go[1][0] = go[1][1] = -1;
+
+    all_fds = calloc(2, sizeof(perf_event_desc_t));
+    num_fds = calloc(2, sizeof(int));
 
 	if (pfm_initialize() != PFM_SUCCESS)
 		errx(1, "libpfm initialization failed");
 
-	for (grp = 0; grp < options.num_groups; grp++) {
-		int ret;
-		ret = perf_setup_list_events(options.events[grp], &fds, &num_fds);
-		if (ret || !num_fds)
-			exit(1);
-	}
+    int c;
+    for (c = 0; c < 2; c++) {
+	    for (grp = 0; grp < options.num_groups; grp++) {
+		    int ret;
+		    ret = perf_setup_list_events(options.events[grp], &all_fds[c], &num_fds[c]);
+		    if (ret || !num_fds[c])
+			    exit(1);
+	    }
+    }
 
-	pid = options.pid;
-	if (!pid) {
-		ret = pipe(ready);
+	pid[0] = pid[1] = options.pid;
+	if (!pid[0] && !pid[1]) {
+        /* first thread */
+		ret = pipe(ready[0]);
 		if (ret)
 			err(1, "cannot create pipe ready");
-
-		ret = pipe(go);
+		ret = pipe(go[0]);
 		if (ret)
 			err(1, "cannot create pipe go");
-
-
 		/*
 		 * Create the child task
 		 */
-		if ((pid=fork()) == -1)
+		if ((pid[0]=fork()) == -1)
 			err(1, "Cannot fork process");
+		if (pid[0] == 0) {
 
-		/*
-		 * and launch the child code
-		 *
-		 * The pipe is used to avoid a race condition
-		 * between for() and exec(). We need the pid
-		 * of the new tak but we want to start measuring
-		 * at the first user level instruction. Thus we
-		 * need to prevent exec until we have attached
-		 * the events.
-		 */
-		if (pid == 0) {
-			close(ready[0]);
-			close(go[1]);
+            cpu_set_t cmask_0;
+            CPU_ZERO (&cmask_0);
+            CPU_SET (0, &cmask_0);
+            sched_setaffinity (pid[0], sizeof(cpu_set_t), &cmask_0);
 
-			/*
-			 * let the parent know we exist
-			 */
-			close(ready[1]);
-			if (read(go[0], &buf, 1) == -1)
+            printf("child_0: step 1\n");
+			close(ready[0][0]);
+            printf("child_0: step 2\n");
+			close(go[0][1]);
+            printf("child_0: step 3\n");
+			close(ready[0][1]);
+            printf("child_0: step 4\n");
+			if (read(go[0][0], &buf_0, 1) == -1)
 				err(1, "unable to read go_pipe");
+            printf("child_0: step 5\n");
+            printf("I'm child_0\n");
+			exit(child(arg));
+		}
+        
+		close(ready[0][1]);
+		close(go[0][0]);
+		if (read(ready[0][0], &buf_0, 1) == -1)
+			err(1, "unable to read child_ready_pipe");
+		close(ready[0][0]);
 
+        /* second thread */
+		ret = pipe(ready[1]);
+		if (ret)
+			err(1, "cannot create pipe ready");
+		ret = pipe(go[1]);
+		if (ret)
+			err(1, "cannot create pipe go");
+		/*
+		 * Create the child task
+		 */
+		if ((pid[1]=fork()) == -1)
+			err(1, "Cannot fork process");
+		if (pid[1] == 0) {
 
+            cpu_set_t cmask_1;
+            CPU_ZERO (&cmask_1);
+            CPU_SET (4, &cmask_1);
+            sched_setaffinity (pid[1], sizeof(cpu_set_t), &cmask_1);
+
+			close(ready[1][0]);
+			close(go[1][1]);
+			close(ready[1][1]);
+			if (read(go[1][0], &buf_1, 1) == -1)
+				err(1, "unable to read go_pipe");
+            printf("I'm child_1\n");
 			exit(child(arg));
 		}
 
-		close(ready[1]);
-		close(go[0]);
-
-		if (read(ready[0], &buf, 1) == -1)
+		close(ready[1][1]);
+		close(go[1][0]);
+		if (read(ready[1][0], &buf_1, 1) == -1)
 			err(1, "unable to read child_ready_pipe");
-
-		close(ready[0]);
+		close(ready[1][0]);
 	}
 
-	for(i=0; i < num_fds; i++) {
-		int is_group_leader; /* boolean */
+    printf("I'm parent\n");
+    for(c=0; c < 2; c++) {
+        fds = all_fds[c];
+	    for(i=0; i < num_fds[c]; i++) {
+		    int is_group_leader; /* boolean */
 
-		is_group_leader = perf_is_group_leader(fds, i);
-		if (is_group_leader) {
-			/* this is the group leader */
-			group_fd = -1;
-		} else {
-			group_fd = fds[fds[i].group_leader].fd;
-		}
+            if (i == 0 || i == 2 || i == 6)
+                is_group_leader = 1;
+            else
+                is_group_leader = 0;
+		    //is_group_leader = perf_is_group_leader(fds, i);
+		    if (is_group_leader) {
+			    /* this is the group leader */
+			    group_fd = -1;
+		    } else {
+			    group_fd = fds[fds[i].group_leader].fd;
+		    }
 
-		/*
-		 * create leader disabled with enable_on-exec
-		 */
-		if (!options.pid) {
-			fds[i].hw.disabled = is_group_leader;
-			fds[i].hw.enable_on_exec = is_group_leader;
-		}
+		    /*
+		     * create leader disabled with enable_on-exec
+		     */
+		    if (!options.pid) {
+			    fds[i].hw.disabled = is_group_leader;
+			    fds[i].hw.enable_on_exec = is_group_leader;
+		    }
 
-		fds[i].hw.read_format = PERF_FORMAT_SCALE;
-		/* request timing information necessary for scaling counts */
-		if (is_group_leader && options.format_group)
-			fds[i].hw.read_format |= PERF_FORMAT_GROUP;
+		    fds[i].hw.read_format = PERF_FORMAT_SCALE;
+		    /* request timing information necessary for scaling counts */
+		    if (is_group_leader && options.format_group)
+			    fds[i].hw.read_format |= PERF_FORMAT_GROUP;
 
-		if (options.inherit)
-			fds[i].hw.inherit = 1;
+		    if (options.inherit)
+			    fds[i].hw.inherit = 1;
 
-		if (options.pin && is_group_leader)
-			fds[i].hw.pinned = 1;
-		fds[i].fd = perf_event_open(&fds[i].hw, pid, -1, group_fd, 0);
-		if (fds[i].fd == -1) {
-			warn("cannot attach event%d %s", i, fds[i].name);
-			goto error;
-		}
-	}
+		    if (options.pin && is_group_leader)
+			    fds[i].hw.pinned = 1;
+		    fds[i].fd = perf_event_open(&fds[i].hw, pid[c], -1, group_fd, 0);
+		    if (fds[i].fd == -1) {
+			    warn("cannot attach event%d %s", i, fds[i].name);
+			    goto error;
+		    }
+	    }
+    }
 
-	if (!options.pid && go[1] > -1)
-		close(go[1]);
+	if (!options.pid && go[0][1] > -1)
+		close(go[0][1]);
+    if (!options.pid && go[1][1] > -1)
+        close(go[1][1]);
 
 	if (options.print) {
 		if (!options.pid) {
-			while(waitpid(pid, &status, WNOHANG) == 0) {
+			while(waitpid(pid[0], &status, WNOHANG) == 0) {
 				sleep(1);
-				print_counts(fds, num_fds);
+				print_counts(all_fds, num_fds);
 			}
 		} else {
 			while(quit == 0) {
 				sleep(1);
-				print_counts(fds, num_fds);
+				print_counts(all_fds, num_fds);
 			}
 		}
 	} else {
 		if (!options.pid)
-			waitpid(pid, &status, 0);
+			waitpid(pid[0], &status, 0);
 		else
 			pause();
-		print_counts(fds, num_fds);
+		print_counts(all_fds, num_fds);
 	}
 
-	for(i=0; i < num_fds; i++)
-		close(fds[i].fd);
-
-	perf_free_fds(fds, num_fds);
+    for(c=0; c < 2; c++) {
+        fds = all_fds[c];
+	    for(i=0; i < num_fds[c]; i++)
+		    close(fds[i].fd);
+	    perf_free_fds(fds, num_fds[c]);
+    }
 
 	/* free libpfm resources cleanly */
 	pfm_terminate();
 
 	return 0;
 error:
-	free(fds);
-	if (!options.pid)
-		kill(SIGKILL, pid);
+    for (c=0; c < 2; c++) {
+        fds = all_fds[c];
+	    free(fds);
+	    if (!options.pid)
+		    kill(SIGKILL, pid[c]);
+    }
 
 	/* free libpfm resources cleanly */
 	pfm_terminate();
