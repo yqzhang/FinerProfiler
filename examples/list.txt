@@ -1,0 +1,2103 @@
+Supported PMU models:
+	[7, netburst, "Pentium4"]
+	[8, netburst_p, "Pentium4 (Prescott)"]
+	[11, core, "Intel Core"]
+	[14, atom, "Intel Atom"]
+	[15, nhm, "Intel Nehalem"]
+	[16, nhm_ex, "Intel Nehalem EX"]
+	[17, nhm_unc, "Intel Nehalem uncore"]
+	[18, ix86arch, "Intel X86 architectural PMU"]
+	[51, perf, "perf_events generic PMU"]
+	[52, wsm, "Intel Westmere (single-socket)"]
+	[53, wsm_dp, "Intel Westmere DP"]
+	[54, wsm_unc, "Intel Westmere uncore"]
+	[55, amd64_k7, "AMD64 K7"]
+	[56, amd64_k8_revb, "AMD64 K8 RevB"]
+	[57, amd64_k8_revc, "AMD64 K8 RevC"]
+	[58, amd64_k8_revd, "AMD64 K8 RevD"]
+	[59, amd64_k8_reve, "AMD64 K8 RevE"]
+	[60, amd64_k8_revf, "AMD64 K8 RevF"]
+	[61, amd64_k8_revg, "AMD64 K8 RevG"]
+	[62, amd64_fam10h_barcelona, "AMD64 Fam10h Barcelona"]
+	[63, amd64_fam10h_shanghai, "AMD64 Fam10h Shanghai"]
+	[64, amd64_fam10h_istanbul, "AMD64 Fam10h Istanbul"]
+	[68, snb, "Intel Sandy Bridge"]
+	[69, amd64_fam14h_bobcat, "AMD64 Fam14h Bobcat"]
+	[70, amd64_fam15h_interlagos, "AMD64 Fam15h Interlagos"]
+	[71, snb_ep, "Intel Sandy Bridge EP"]
+	[72, amd64_fam12h_llano, "AMD64 Fam12h Llano"]
+	[73, amd64_fam11h_turion, "AMD64 Fam11h Turion"]
+	[74, ivb, "Intel Ivy Bridge"]
+	[76, snb_unc_cbo0, "Intel Sandy Bridge C-box0 uncore"]
+	[77, snb_unc_cbo1, "Intel Sandy Bridge C-box1 uncore"]
+	[78, snb_unc_cbo2, "Intel Sandy Bridge C-box2 uncore"]
+	[79, snb_unc_cbo3, "Intel Sandy Bridge C-box3 uncore"]
+	[80, snbep_unc_cbo0, "Intel Sandy Bridge-EP C-Box 0 uncore"]
+	[81, snbep_unc_cbo1, "Intel Sandy Bridge-EP C-Box 1 uncore"]
+	[82, snbep_unc_cbo2, "Intel Sandy Bridge-EP C-Box 2 uncore"]
+	[83, snbep_unc_cbo3, "Intel Sandy Bridge-EP C-Box 3 uncore"]
+	[84, snbep_unc_cbo4, "Intel Sandy Bridge-EP C-Box 4 uncore"]
+	[85, snbep_unc_cbo5, "Intel Sandy Bridge-EP C-Box 5 uncore"]
+	[86, snbep_unc_cbo6, "Intel Sandy Bridge-EP C-Box 6 uncore"]
+	[87, snbep_unc_cbo7, "Intel Sandy Bridge-EP C-Box 7 uncore"]
+	[88, snbep_unc_ha, "Intel Sandy Bridge-EP HA uncore"]
+	[89, snbep_unc_imc0, "Intel Sandy Bridge-EP IMC0 uncore"]
+	[90, snbep_unc_imc1, "Intel Sandy Bridge-EP IMC1 uncore"]
+	[91, snbep_unc_imc2, "Intel Sandy Bridge-EP IMC2 uncore"]
+	[92, snbep_unc_imc3, "Intel Sandy Bridge-EP IMC3 uncore"]
+	[93, snbep_unc_pcu, "Intel Sandy Bridge-EP PCU uncore"]
+	[94, snbep_unc_qpi0, "Intel Sandy Bridge-EP QPI0 uncore"]
+	[95, snbep_unc_qpi1, "Intel Sandy Bridge-EP QPI1 uncore"]
+	[96, snbep_unc_ubo, "Intel Sandy Bridge-EP U-Box uncore"]
+	[97, snbep_unc_r2pcie, "Intel Sandy Bridge-EP R2PCIe uncore"]
+	[98, snbep_unc_r3qpi0, "Intel Sandy Bridge-EP R3QPI0 uncore"]
+	[99, snbep_unc_r3qpi1, "Intel Sandy Bridge-EP R3QPI1 uncore"]
+	[100, knc, "Intel Knights Corner"]
+Detected PMU models:
+	[18, ix86arch, "Intel X86 architectural PMU", 7 events, 1 max encoding, 7 counters, core PMU]
+	[51, perf, "perf_events generic PMU", 80 events, 1 max encoding, 0 counters, OS generic PMU]
+	[74, ivb, "Intel Ivy Bridge", 69 events, 2 max encoding, 11 counters, core PMU]
+Total events: 2898 available, 156 supported
+#-----------------------------
+IDX	 : 37748736
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : UNHALTED_CORE_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : count core clock cycles whenever the clock signal on the specific core is running (not halted)
+Code     : 0x3c
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 37748737
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : INSTRUCTION_RETIRED
+Equiv	 : None
+Flags    : None
+Desc     : count the number of instructions at retirement. For instructions that consists of multiple micro-ops, this event counts the retirement of the last micro-op of the instruction
+Code     : 0xc0
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 37748738
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : UNHALTED_REFERENCE_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : count reference clock cycles while the clock signal on the specific core is running. The reference clock operates at a fixed frequency, irrespective of core freqeuncy changes due to performance state transitions
+Code     : 0x13c
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 37748739
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : LLC_REFERENCES
+Equiv	 : None
+Flags    : None
+Desc     : count each request originating from the core to reference a cache line in the last level cache. The count may include speculation, but excludes cache line fills due to hardware prefetch
+Code     : 0x4f2e
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 37748740
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : LLC_MISSES
+Equiv	 : None
+Flags    : None
+Desc     : count each cache miss condition for references to the last level cache. The event count may include speculation, but excludes cache line fills due to hardware prefetch
+Code     : 0x412e
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 37748741
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : BRANCH_INSTRUCTIONS_RETIRED
+Equiv	 : None
+Flags    : None
+Desc     : count branch instructions at retirement. Specifically, this event counts the retirement of the last micro-op of a branch instruction
+Code     : 0xc4
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 37748742
+PMU name : ix86arch (Intel X86 architectural PMU)
+Name     : MISPREDICTED_BRANCH_RETIRED
+Equiv	 : None
+Flags    : None
+Desc     : count mispredicted branch instructions at retirement. Specifically, this event counts at retirement of the last micro-op of a branch instruction in the architectural path of the execution and experienced misprediction in the branch prediction hardware
+Code     : 0xc5
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 106954752
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CPU_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_CPU_CYCLES
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954753
+PMU name : perf (perf_events generic PMU)
+Name     : CYCLES
+Equiv	 : PERF_COUNT_HW_CPU_CYCLES
+Flags    : None
+Desc     : PERF_COUNT_HW_CPU_CYCLES
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954754
+PMU name : perf (perf_events generic PMU)
+Name     : CPU-CYCLES
+Equiv	 : PERF_COUNT_HW_CPU_CYCLES
+Flags    : None
+Desc     : PERF_COUNT_HW_CPU_CYCLES
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954755
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_INSTRUCTIONS
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_INSTRUCTIONS
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954756
+PMU name : perf (perf_events generic PMU)
+Name     : INSTRUCTIONS
+Equiv	 : PERF_COUNT_HW_INSTRUCTIONS
+Flags    : None
+Desc     : PERF_COUNT_HW_INSTRUCTIONS
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954757
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_REFERENCES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_CACHE_REFERENCES
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954758
+PMU name : perf (perf_events generic PMU)
+Name     : CACHE-REFERENCES
+Equiv	 : PERF_COUNT_HW_CACHE_REFERENCES
+Flags    : None
+Desc     : PERF_COUNT_HW_CACHE_REFERENCES
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954759
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_MISSES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_CACHE_MISSES
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954760
+PMU name : perf (perf_events generic PMU)
+Name     : CACHE-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_MISSES
+Flags    : None
+Desc     : PERF_COUNT_HW_CACHE_MISSES
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954761
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_BRANCH_INSTRUCTIONS
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_BRANCH_INSTRUCTIONS
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954762
+PMU name : perf (perf_events generic PMU)
+Name     : BRANCH-INSTRUCTIONS
+Equiv	 : PERF_COUNT_HW_BRANCH_INSTRUCTIONS
+Flags    : None
+Desc     : PERF_COUNT_HW_BRANCH_INSTRUCTIONS
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954763
+PMU name : perf (perf_events generic PMU)
+Name     : BRANCHES
+Equiv	 : PERF_COUNT_HW_BRANCH_INSTRUCTIONS
+Flags    : None
+Desc     : PERF_COUNT_HW_BRANCH_INSTRUCTIONS
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954764
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_BRANCH_MISSES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_BRANCH_MISSES
+Code     : 0x5
+#-----------------------------
+IDX	 : 106954765
+PMU name : perf (perf_events generic PMU)
+Name     : BRANCH-MISSES
+Equiv	 : PERF_COUNT_HW_BRANCH_MISSES
+Flags    : None
+Desc     : PERF_COUNT_HW_BRANCH_MISSES
+Code     : 0x5
+#-----------------------------
+IDX	 : 106954766
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_BUS_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_BUS_CYCLES
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954767
+PMU name : perf (perf_events generic PMU)
+Name     : BUS-CYCLES
+Equiv	 : PERF_COUNT_HW_BUS_CYCLES
+Flags    : None
+Desc     : PERF_COUNT_HW_BUS_CYCLES
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954768
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_STALLED_CYCLES_FRONTEND
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_STALLED_CYCLES_FRONTEND
+Code     : 0x7
+#-----------------------------
+IDX	 : 106954769
+PMU name : perf (perf_events generic PMU)
+Name     : STALLED-CYCLES-FRONTEND
+Equiv	 : PERF_COUNT_HW_STALLED_CYCLES_FRONTEND
+Flags    : None
+Desc     : PERF_COUNT_HW_STALLED_CYCLES_FRONTEND
+Code     : 0x7
+#-----------------------------
+IDX	 : 106954770
+PMU name : perf (perf_events generic PMU)
+Name     : IDLE-CYCLES-FRONTEND
+Equiv	 : PERF_COUNT_HW_STALLED_CYCLES_FRONTEND
+Flags    : None
+Desc     : PERF_COUNT_HW_STALLED_CYCLES_FRONTEND
+Code     : 0x7
+#-----------------------------
+IDX	 : 106954771
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_STALLED_CYCLES_BACKEND
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_STALLED_CYCLES_BACKEND
+Code     : 0x8
+#-----------------------------
+IDX	 : 106954772
+PMU name : perf (perf_events generic PMU)
+Name     : STALLED-CYCLES-BACKEND
+Equiv	 : PERF_COUNT_HW_STALLED_CYCLES_BACKEND
+Flags    : None
+Desc     : PERF_COUNT_HW_STALLED_CYCLES_BACKEND
+Code     : 0x8
+#-----------------------------
+IDX	 : 106954773
+PMU name : perf (perf_events generic PMU)
+Name     : IDLE-CYCLES-BACKEND
+Equiv	 : PERF_COUNT_HW_STALLED_CYCLES_BACKEND
+Flags    : None
+Desc     : PERF_COUNT_HW_STALLED_CYCLES_BACKEND
+Code     : 0x8
+#-----------------------------
+IDX	 : 106954774
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_REF_CPU_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_HW_REF_CPU_CYCLES
+Code     : 0x9
+#-----------------------------
+IDX	 : 106954775
+PMU name : perf (perf_events generic PMU)
+Name     : REF-CYCLES
+Equiv	 : PERF_COUNT_HW_REF_CPU_CYCLES
+Flags    : None
+Desc     : PERF_COUNT_HW_REF_CPU_CYCLES
+Code     : 0x9
+#-----------------------------
+IDX	 : 106954776
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_CPU_CLOCK
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_CPU_CLOCK
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954777
+PMU name : perf (perf_events generic PMU)
+Name     : CPU-CLOCK
+Equiv	 : PERF_COUNT_SW_CPU_CLOCK
+Flags    : None
+Desc     : PERF_COUNT_SW_CPU_CLOCK
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954778
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_TASK_CLOCK
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_TASK_CLOCK
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954779
+PMU name : perf (perf_events generic PMU)
+Name     : TASK-CLOCK
+Equiv	 : PERF_COUNT_SW_TASK_CLOCK
+Flags    : None
+Desc     : PERF_COUNT_SW_TASK_CLOCK
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954780
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_PAGE_FAULTS
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954781
+PMU name : perf (perf_events generic PMU)
+Name     : PAGE-FAULTS
+Equiv	 : PERF_COUNT_SW_PAGE_FAULTS
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954782
+PMU name : perf (perf_events generic PMU)
+Name     : FAULTS
+Equiv	 : PERF_COUNT_SW_PAGE_FAULTS
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954783
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_CONTEXT_SWITCHES
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_CONTEXT_SWITCHES
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954784
+PMU name : perf (perf_events generic PMU)
+Name     : CONTEXT-SWITCHES
+Equiv	 : PERF_COUNT_SW_CONTEXT_SWITCHES
+Flags    : None
+Desc     : PERF_COUNT_SW_CONTEXT_SWITCHES
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954785
+PMU name : perf (perf_events generic PMU)
+Name     : CS
+Equiv	 : PERF_COUNT_SW_CONTEXT_SWITCHES
+Flags    : None
+Desc     : PERF_COUNT_SW_CONTEXT_SWITCHES
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954786
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_CPU_MIGRATIONS
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_CPU_MIGRATIONS
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954787
+PMU name : perf (perf_events generic PMU)
+Name     : CPU-MIGRATIONS
+Equiv	 : PERF_COUNT_SW_CPU_MIGRATIONS
+Flags    : None
+Desc     : PERF_COUNT_SW_CPU_MIGRATIONS
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954788
+PMU name : perf (perf_events generic PMU)
+Name     : MIGRATIONS
+Equiv	 : PERF_COUNT_SW_CPU_MIGRATIONS
+Flags    : None
+Desc     : PERF_COUNT_SW_CPU_MIGRATIONS
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954789
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_PAGE_FAULTS_MIN
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS_MIN
+Code     : 0x5
+#-----------------------------
+IDX	 : 106954790
+PMU name : perf (perf_events generic PMU)
+Name     : MINOR-FAULTS
+Equiv	 : PERF_COUNT_SW_PAGE_FAULTS_MIN
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS_MIN
+Code     : 0x5
+#-----------------------------
+IDX	 : 106954791
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_SW_PAGE_FAULTS_MAJ
+Equiv	 : None
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS_MAJ
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954792
+PMU name : perf (perf_events generic PMU)
+Name     : MAJOR-FAULTS
+Equiv	 : PERF_COUNT_SW_PAGE_FAULTS_MAJ
+Flags    : None
+Desc     : PERF_COUNT_SW_PAGE_FAULTS_MAJ
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954793
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_L1D
+Equiv	 : None
+Flags    : None
+Desc     : L1 data cache
+Code     : 0x0
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x100 : PMU : [WRITE] : None : write access
+Umask-02 : 0x200 : PMU : [PREFETCH] : None : prefetch access
+Umask-03 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-04 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954794
+PMU name : perf (perf_events generic PMU)
+Name     : L1-DCACHE-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_L1D:READ:ACCESS
+Flags    : None
+Desc     : L1 cache load accesses
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954795
+PMU name : perf (perf_events generic PMU)
+Name     : L1-DCACHE-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_L1D:READ:MISS
+Flags    : None
+Desc     : L1 cache load misses
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954796
+PMU name : perf (perf_events generic PMU)
+Name     : L1-DCACHE-STORES
+Equiv	 : PERF_COUNT_HW_CACHE_L1D:WRITE:ACCESS
+Flags    : None
+Desc     : L1 cache store accesses
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954797
+PMU name : perf (perf_events generic PMU)
+Name     : L1-DCACHE-STORE-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_L1D:WRITE:MISS
+Flags    : None
+Desc     : L1 cache store misses
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954798
+PMU name : perf (perf_events generic PMU)
+Name     : L1-DCACHE-PREFETCHES
+Equiv	 : PERF_COUNT_HW_CACHE_L1D:PREFETCH:ACCESS
+Flags    : None
+Desc     : L1 cache prefetch accesses
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954799
+PMU name : perf (perf_events generic PMU)
+Name     : L1-DCACHE-PREFETCH-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_L1D:PREFETCH:MISS
+Flags    : None
+Desc     : L1 cache prefetch misses
+Code     : 0x0
+#-----------------------------
+IDX	 : 106954800
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_L1I
+Equiv	 : None
+Flags    : None
+Desc     : L1 instruction cache
+Code     : 0x1
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x200 : PMU : [PREFETCH] : None : prefetch access
+Umask-02 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-03 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954801
+PMU name : perf (perf_events generic PMU)
+Name     : L1-ICACHE-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_L1I:READ:ACCESS
+Flags    : None
+Desc     : L1I cache load accesses
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954802
+PMU name : perf (perf_events generic PMU)
+Name     : L1-ICACHE-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_L1I:READ:MISS
+Flags    : None
+Desc     : L1I cache load misses
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954803
+PMU name : perf (perf_events generic PMU)
+Name     : L1-ICACHE-PREFETCHES
+Equiv	 : PERF_COUNT_HW_CACHE_L1I:PREFETCH:ACCESS
+Flags    : None
+Desc     : L1I cache prefetch accesses
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954804
+PMU name : perf (perf_events generic PMU)
+Name     : L1-ICACHE-PREFETCH-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_L1I:PREFETCH:MISS
+Flags    : None
+Desc     : L1I cache prefetch misses
+Code     : 0x1
+#-----------------------------
+IDX	 : 106954805
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_LL
+Equiv	 : None
+Flags    : None
+Desc     : Last level cache
+Code     : 0x2
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x100 : PMU : [WRITE] : None : write access
+Umask-02 : 0x200 : PMU : [PREFETCH] : None : prefetch access
+Umask-03 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-04 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954806
+PMU name : perf (perf_events generic PMU)
+Name     : LLC-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_LL:READ:ACCESS
+Flags    : None
+Desc     : Last level cache load accesses
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954807
+PMU name : perf (perf_events generic PMU)
+Name     : LLC-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_LL:READ:MISS
+Flags    : None
+Desc     : Last level cache load misses
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954808
+PMU name : perf (perf_events generic PMU)
+Name     : LLC-STORES
+Equiv	 : PERF_COUNT_HW_CACHE_LL:WRITE:ACCESS
+Flags    : None
+Desc     : Last level cache store accesses
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954809
+PMU name : perf (perf_events generic PMU)
+Name     : LLC-STORE-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_LL:WRITE:MISS
+Flags    : None
+Desc     : Last level cache store misses
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954810
+PMU name : perf (perf_events generic PMU)
+Name     : LLC-PREFETCHES
+Equiv	 : PERF_COUNT_HW_CACHE_LL:PREFETCH:ACCESS
+Flags    : None
+Desc     : Last level cache prefetch accesses
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954811
+PMU name : perf (perf_events generic PMU)
+Name     : LLC-PREFETCH-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_LL:PREFETCH:MISS
+Flags    : None
+Desc     : Last level cache prefetch misses
+Code     : 0x2
+#-----------------------------
+IDX	 : 106954812
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_DTLB
+Equiv	 : None
+Flags    : None
+Desc     : Data Translation Lookaside Buffer
+Code     : 0x3
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x100 : PMU : [WRITE] : None : write access
+Umask-02 : 0x200 : PMU : [PREFETCH] : None : prefetch access
+Umask-03 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-04 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954813
+PMU name : perf (perf_events generic PMU)
+Name     : DTLB-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_DTLB:READ:ACCESS
+Flags    : None
+Desc     : Data TLB load accesses
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954814
+PMU name : perf (perf_events generic PMU)
+Name     : DTLB-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_DTLB:READ:MISS
+Flags    : None
+Desc     : Data TLB load misses
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954815
+PMU name : perf (perf_events generic PMU)
+Name     : DTLB-STORES
+Equiv	 : PERF_COUNT_HW_CACHE_DTLB:WRITE:ACCESS
+Flags    : None
+Desc     : Data TLB store accesses
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954816
+PMU name : perf (perf_events generic PMU)
+Name     : DTLB-STORE-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_DTLB:WRITE:MISS
+Flags    : None
+Desc     : Data TLB store misses
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954817
+PMU name : perf (perf_events generic PMU)
+Name     : DTLB-PREFETCHES
+Equiv	 : PERF_COUNT_HW_CACHE_DTLB:PREFETCH:ACCESS
+Flags    : None
+Desc     : Data TLB prefetch accesses
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954818
+PMU name : perf (perf_events generic PMU)
+Name     : DTLB-PREFETCH-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_DTLB:PREFETCH:MISS
+Flags    : None
+Desc     : Data TLB prefetch misses
+Code     : 0x3
+#-----------------------------
+IDX	 : 106954819
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_ITLB
+Equiv	 : None
+Flags    : None
+Desc     : Instruction Translation Lookaside Buffer
+Code     : 0x4
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-02 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954820
+PMU name : perf (perf_events generic PMU)
+Name     : ITLB-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_ITLB:READ:ACCESS
+Flags    : None
+Desc     : Instruction TLB load accesses
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954821
+PMU name : perf (perf_events generic PMU)
+Name     : ITLB-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_ITLB:READ:MISS
+Flags    : None
+Desc     : Instruction TLB load misses
+Code     : 0x4
+#-----------------------------
+IDX	 : 106954822
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_BPU
+Equiv	 : None
+Flags    : None
+Desc     : Branch Prediction Unit
+Code     : 0x5
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-02 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954823
+PMU name : perf (perf_events generic PMU)
+Name     : BRANCH-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_BPU:READ:ACCESS
+Flags    : None
+Desc     : Branch  load accesses
+Code     : 0x5
+#-----------------------------
+IDX	 : 106954824
+PMU name : perf (perf_events generic PMU)
+Name     : BRANCH-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_BPU:READ:MISS
+Flags    : None
+Desc     : Branch  load misses
+Code     : 0x5
+#-----------------------------
+IDX	 : 106954825
+PMU name : perf (perf_events generic PMU)
+Name     : PERF_COUNT_HW_CACHE_NODE
+Equiv	 : None
+Flags    : None
+Desc     : Node memory access
+Code     : 0x6
+Umask-00 : 0x00 : PMU : [READ] : None : read access
+Umask-01 : 0x100 : PMU : [WRITE] : None : write access
+Umask-02 : 0x200 : PMU : [PREFETCH] : None : prefetch access
+Umask-03 : 0x00 : PMU : [ACCESS] : None : hit access
+Umask-04 : 0x10000 : PMU : [MISS] : None : miss access
+#-----------------------------
+IDX	 : 106954826
+PMU name : perf (perf_events generic PMU)
+Name     : NODE-LOADS
+Equiv	 : PERF_COUNT_HW_CACHE_NODE:READ:ACCESS
+Flags    : None
+Desc     : Node  load accesses
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954827
+PMU name : perf (perf_events generic PMU)
+Name     : NODE-LOAD-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_NODE:READ:MISS
+Flags    : None
+Desc     : Node  load misses
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954828
+PMU name : perf (perf_events generic PMU)
+Name     : NODE-STORES
+Equiv	 : PERF_COUNT_HW_CACHE_NODE:WRITE:ACCESS
+Flags    : None
+Desc     : Node  store accesses
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954829
+PMU name : perf (perf_events generic PMU)
+Name     : NODE-STORE-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_NODE:WRITE:MISS
+Flags    : None
+Desc     : Node  store misses
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954830
+PMU name : perf (perf_events generic PMU)
+Name     : NODE-PREFETCHES
+Equiv	 : PERF_COUNT_HW_CACHE_NODE:PREFETCH:ACCESS
+Flags    : None
+Desc     : Node  prefetch accesses
+Code     : 0x6
+#-----------------------------
+IDX	 : 106954831
+PMU name : perf (perf_events generic PMU)
+Name     : NODE-PREFETCH-MISSES
+Equiv	 : PERF_COUNT_HW_CACHE_NODE:PREFETCH:MISS
+Flags    : None
+Desc     : Node  prefetch misses
+Code     : 0x6
+#-----------------------------
+IDX	 : 155189248
+PMU name : ivb (Intel Ivy Bridge)
+Name     : ARITH
+Equiv	 : None
+Flags    : None
+Desc     : Counts arithmetic multiply operations
+Code     : 0x14
+Umask-00 : 0x01 : PMU : [FPU_DIV_ACTIVE] : None : Cycles that the divider is active, includes integer and floating point
+Umask-01 : 0x10401 : PMU : [FPU_DIV] : None : Alias to FPU_DIV_ACTIVE:c=1:e=1
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189249
+PMU name : ivb (Intel Ivy Bridge)
+Name     : BACLEARS
+Equiv	 : None
+Flags    : None
+Desc     : Branch resteered
+Code     : 0xe6
+Umask-00 : 0x1f : PMU : [ANY] : [default] : Counts the number of times the front end is resteered, mainly when the BPU cannot provide a correct prediction and this is corrected by other branch handling mechanisms at the front end
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189250
+PMU name : ivb (Intel Ivy Bridge)
+Name     : BR_INST_EXEC
+Equiv	 : None
+Flags    : None
+Desc     : Branch instructions executed
+Code     : 0x88
+Umask-00 : 0x41 : PMU : [NONTAKEN_COND] : None : All macro conditional non-taken branch instructions
+Umask-01 : 0x81 : PMU : [TAKEN_COND] : None : All macro conditional taken branch instructions
+Umask-02 : 0x82 : PMU : [TAKEN_DIRECT_JUMP] : None : All macro unconditional taken branch instructions, excluding calls and indirects
+Umask-03 : 0x44 : PMU : [NONTAKEN_INDIRECT_JUMP_NON_CALL_RET] : None : All non-taken indirect branches that are not calls nor returns
+Umask-04 : 0x84 : PMU : [TAKEN_INDIRECT_JUMP_NON_CALL_RET] : None : All taken indirect branches that are not calls nor returns
+Umask-05 : 0x88 : PMU : [TAKEN_NEAR_RETURN] : None : All taken indirect branches that have a return mnemonic
+Umask-06 : 0x90 : PMU : [TAKEN_DIRECT_NEAR_CALL] : None : All taken non-indirect calls
+Umask-07 : 0xa0 : PMU : [TAKEN_INDIRECT_NEAR_CALL] : None : All taken indirect calls, including both register and memory indirect
+Umask-08 : 0xff : PMU : [ALL_BRANCHES] : [default] : All near executed branches instructions (not necessarily retired)
+Umask-09 : 0xc1 : PMU : [ALL_COND] : None : All macro conditional branch instructions
+Umask-10 : 0xc1 : PMU : [ANY_COND] : None : Alias to ALL_COND
+Umask-11 : 0xc4 : PMU : [ANY_INDIRECT_JUMP_NON_CALL_RET] : None : All indirect branches that are not calls nor returns
+Umask-12 : 0xd0 : PMU : [ANY_DIRECT_NEAR_CALL] : None : All non-indirect calls
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189251
+PMU name : ivb (Intel Ivy Bridge)
+Name     : BR_INST_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Retired branch instructions
+Code     : 0xc4
+Umask-00 : 0x00 : PMU : [ALL_BRANCHES] : [default] [precise] : All taken and not taken macro branches including far branches (Precise Event)
+Umask-01 : 0x01 : PMU : [COND] : [precise] : All taken and not taken macro conditional branch instructions (Precise Event)
+Umask-02 : 0x40 : PMU : [FAR_BRANCH] : [precise] : Number of far branch instructions retired (Precise Event)
+Umask-03 : 0x02 : PMU : [NEAR_CALL] : [precise] : All macro direct and indirect near calls, does not count far calls (Precise Event)
+Umask-04 : 0x08 : PMU : [NEAR_RETURN] : [precise] : Number of near ret instructions retired (Precise Event)
+Umask-05 : 0x20 : PMU : [NEAR_TAKEN] : [precise] : Number of near branch taken instructions retired (Precise Event)
+Umask-06 : 0x10 : PMU : [NOT_TAKEN] : [precise] : All not taken macro branch instructions retired (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189252
+PMU name : ivb (Intel Ivy Bridge)
+Name     : BR_MISP_EXEC
+Equiv	 : None
+Flags    : None
+Desc     : Mispredicted branches executed
+Code     : 0x89
+Umask-00 : 0x41 : PMU : [NONTAKEN_COND] : None : All non-taken mispredicted macro conditional branch instructions
+Umask-01 : 0x81 : PMU : [TAKEN_COND] : None : All taken mispredicted macro conditional branch instructions
+Umask-02 : 0x84 : PMU : [TAKEN_INDIRECT_JUMP_NON_CALL_RET] : None : All taken mispredicted indirect branches that are not calls nor returns
+Umask-03 : 0x88 : PMU : [TAKEN_NEAR_RETURN] : None : All taken mispredicted indirect branches that have a return mnemonic
+Umask-04 : 0x90 : PMU : [TAKEN_DIRECT_NEAR_CALL] : None : All taken mispredicted non-indirect calls
+Umask-05 : 0xa0 : PMU : [TAKEN_INDIRECT_NEAR_CALL] : None : All taken mispredicted indirect calls, including both register and memory indirect
+Umask-06 : 0xc1 : PMU : [ANY_COND] : None : All mispredicted macro conditional branch instructions
+Umask-07 : 0xc8 : PMU : [ANY_RETURN_NEAR] : None : All mispredicted indirect branches that have a return mnemonic
+Umask-08 : 0xd0 : PMU : [ANY_DIRECT_NEAR_CALL] : None : All mispredicted non-indirect calls
+Umask-09 : 0xc4 : PMU : [ANY_INDIRECT_JUMP_NON_CALL_RET] : None : All mispredicted indirect branches that are not calls nor returns
+Umask-10 : 0xff : PMU : [ALL_BRANCHES] : [default] : All mispredicted branch instructions
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189253
+PMU name : ivb (Intel Ivy Bridge)
+Name     : BR_MISP_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Mispredicted retired branches
+Code     : 0xc5
+Umask-00 : 0x00 : PMU : [ALL_BRANCHES] : [default] [precise] : All mispredicted macro branches (Precise Event)
+Umask-01 : 0x01 : PMU : [COND] : [precise] : All mispredicted macro conditional branch instructions (Precise Event)
+Umask-02 : 0x02 : PMU : [NEAR_CALL] : [precise] : All macro direct and indirect near calls (Precise Event)
+Umask-03 : 0x10 : PMU : [NOT_TAKEN] : [precise] : Number of branch instructions retired that were mispredicted and not-taken (Precise Event)
+Umask-04 : 0x20 : PMU : [TAKEN] : [precise] : Number of branch instructions retired that were mispredicted and taken (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189254
+PMU name : ivb (Intel Ivy Bridge)
+Name     : BRANCH_INSTRUCTIONS_RETIRED
+Equiv	 : BR_INST_RETIRED:ALL_BRANCHES
+Flags    : None
+Desc     : Count branch instructions at retirement. Specifically, this event counts the retirement of the last micro-op of a branch instruction
+Code     : 0xc4
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189255
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MISPREDICTED_BRANCH_RETIRED
+Equiv	 : BR_MISP_RETIRED:ALL_BRANCHES
+Flags    : None
+Desc     : Count mispredicted branch instructions at retirement. Specifically, this event counts at retirement of the last micro-op of a branch instruction in the architectural path of the execution and experienced misprediction in the branch prediction hardware
+Code     : 0xc5
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189256
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LOCK_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : Locked cycles in L1D and L2
+Code     : 0x63
+Umask-00 : 0x01 : PMU : [SPLIT_LOCK_UC_LOCK_DURATION] : None : Cycles in which the L1D and L2 are locked, due to a UC lock or split lock
+Umask-01 : 0x02 : PMU : [CACHE_LOCK_DURATION] : None : Cycles in which the L1D is locked
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189257
+PMU name : ivb (Intel Ivy Bridge)
+Name     : CPL_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : Unhalted core cycles at a specific ring level
+Code     : 0x5c
+Umask-00 : 0x01 : PMU : [RING0] : None : Unhalted core cycles the thread was in ring 0
+Umask-01 : 0x10401 : PMU : [RING0_TRANS] : None : Alias to RING0:c=1:e=1
+Umask-02 : 0x02 : PMU : [RING123] : None : Unhalted core cycles the thread was in rings 1, 2, or 3
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189258
+PMU name : ivb (Intel Ivy Bridge)
+Name     : CPU_CLK_UNHALTED
+Equiv	 : None
+Flags    : None
+Desc     : Cycles when processor is not in halted state
+Code     : 0x3c
+Umask-00 : 0x01 : PMU : [REF_P] : None : Alias to REF_XCLK
+Umask-01 : 0x01 : PMU : [REF_XCLK] : None : Cycles when the core is unhalted (count at 100 Mhz)
+Umask-02 : 0x00 : PMU : [THREAD_P] : [default] : Cycles when thread is not halted
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189259
+PMU name : ivb (Intel Ivy Bridge)
+Name     : DSB2MITE_SWITCHES
+Equiv	 : None
+Flags    : None
+Desc     : Number of DSB to MITE switches
+Code     : 0xab
+Umask-00 : 0x01 : PMU : [COUNT] : [default] : Number of DSB to MITE switches
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189260
+PMU name : ivb (Intel Ivy Bridge)
+Name     : DSB_FILL
+Equiv	 : None
+Flags    : None
+Desc     : DSB fills
+Code     : 0xac
+Umask-00 : 0x08 : PMU : [EXCEED_DSB_LINES] : [default] : DSB Fill encountered > 3 DSB lines
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189261
+PMU name : ivb (Intel Ivy Bridge)
+Name     : DTLB_LOAD_MISSES
+Equiv	 : None
+Flags    : None
+Desc     : Data TLB load misses
+Code     : 0x8
+Umask-00 : 0x81 : PMU : [MISS_CAUSES_A_WALK] : None : Demand load miss in all TLB levels which causes a page walk of any page size
+Umask-01 : 0x82 : PMU : [WALK_COMPLETED] : None : Demand load miss in all TLB levels which causes a page walk that completes for any page size
+Umask-02 : 0x84 : PMU : [WALK_DURATION] : None : Cycles PMH is busy with a walk due to demand loads
+Umask-03 : 0x81 : PMU : [DEMAND_LD_MISS_CAUSES_A_WALK] : None : Alias to MISS_CAUSES_A_WALK
+Umask-04 : 0x82 : PMU : [DEMAND_LD_WALK_COMPLETED] : None : Alias to WALK_COMPLETED
+Umask-05 : 0x84 : PMU : [DEMAND_LD_WALK_DURATION] : None : Alias to WALK_DURATION
+Umask-06 : 0x45f : PMU : [STLB_HIT] : None : Number of load operations that missed L1TLB but hit L2TLB
+Umask-07 : 0x88 : PMU : [LARGE_WALK_COMPLETED] : None : Number of large page walks completed for demand loads
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189262
+PMU name : ivb (Intel Ivy Bridge)
+Name     : DTLB_STORE_MISSES
+Equiv	 : None
+Flags    : None
+Desc     : Data TLB store misses
+Code     : 0x49
+Umask-00 : 0x01 : PMU : [MISS_CAUSES_A_WALK] : None : Miss in all TLB levels that causes a page walk of any page size (4K/2M/4M/1G)
+Umask-01 : 0x01 : PMU : [CAUSES_A_WALK] : None : Alias to MISS_CAUSES_A_WALK
+Umask-02 : 0x10 : PMU : [STLB_HIT] : None : First level miss but second level hit; no page walk. Only relevant if multiple levels
+Umask-03 : 0x02 : PMU : [WALK_COMPLETED] : None : Miss in all TLB levels that causes a page walk that completes of any page size (4K/2M/4M/1G)
+Umask-04 : 0x04 : PMU : [WALK_DURATION] : None : Cycles PMH is busy with this walk
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189263
+PMU name : ivb (Intel Ivy Bridge)
+Name     : FP_ASSIST
+Equiv	 : None
+Flags    : None
+Desc     : X87 Floating point assists
+Code     : 0xca
+Umask-00 : 0x1e : PMU : [ANY] : [default] : Cycles with any input/output SSE or FP assists
+Umask-01 : 0x10 : PMU : [SIMD_INPUT] : None : Number of SIMD FP assists due to input values
+Umask-02 : 0x08 : PMU : [SIMD_OUTPUT] : None : Number of SIMD FP assists due to output values
+Umask-03 : 0x04 : PMU : [X87_INPUT] : None : Number of X87 assists due to input value
+Umask-04 : 0x02 : PMU : [X87_OUTPUT] : None : Number of X87 assists due to output value
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189264
+PMU name : ivb (Intel Ivy Bridge)
+Name     : ICACHE
+Equiv	 : None
+Flags    : None
+Desc     : Instruction Cache accesses
+Code     : 0x80
+Umask-00 : 0x02 : PMU : [MISSES] : [default] : Number of Instruction Cache, Streaming Buffer and Victim Cache Misses. Includes UC accesses
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189265
+PMU name : ivb (Intel Ivy Bridge)
+Name     : IDQ
+Equiv	 : None
+Flags    : None
+Desc     : IDQ operations
+Code     : 0x79
+Umask-00 : 0x02 : PMU : [EMPTY] : None : Cycles IDQ is empty
+Umask-01 : 0x04 : PMU : [MITE_UOPS] : None : Number of uops delivered to IDQ from MITE path
+Umask-02 : 0x08 : PMU : [DSB_UOPS] : None : Number of uops delivered to IDQ from DSB path
+Umask-03 : 0x10 : PMU : [MS_DSB_UOPS] : None : Number of uops delivered to IDQ when MS busy by DSB
+Umask-04 : 0x20 : PMU : [MS_MITE_UOPS] : None : Number of uops delivered to IDQ when MS busy by MITE
+Umask-05 : 0x30 : PMU : [MS_UOPS] : None : Number of uops were delivered to IDQ from MS by either DSB or MITE
+Umask-06 : 0x10004 : PMU : [MITE_UOPS_CYCLES] : None : Alias to MITE_UOPS:c=1
+Umask-07 : 0x10008 : PMU : [DSB_UOPS_CYCLES] : None : Cycles where uops are delivered to IDQ from DSB (DSB active)
+Umask-08 : 0x10010 : PMU : [MS_DSB_UOPS_CYCLES] : None : Alias to MS_DSB_UOPS:c=1
+Umask-09 : 0x10020 : PMU : [MS_MITE_UOPS_CYCLES] : None : Alias to MS_MITE_UOPS:c=1
+Umask-10 : 0x10030 : PMU : [MS_UOPS_CYCLES] : None : Alias to MS_UOPS:c=1
+Umask-11 : 0x18 : PMU : [ALL_DSB_UOPS] : None : Number of uops delivered from either DSB paths
+Umask-12 : 0x10018 : PMU : [ALL_DSB_CYCLES] : None : Cycles MITE/MS delivered anything
+Umask-13 : 0x40018 : PMU : [ALL_DSB_CYCLES_4_UOPS] : None : Cycles MITE/MS delivered 4 uops
+Umask-14 : 0x24 : PMU : [ALL_MITE_UOPS] : None : Number of uops delivered from either MITE paths
+Umask-15 : 0x10024 : PMU : [ALL_MITE_CYCLES] : None : Cycles DSB/MS delivered anything
+Umask-16 : 0x3c : PMU : [ANY_UOPS] : None : Number of uops delivered to IDQ from any path
+Umask-17 : 0x10410 : PMU : [MS_DSB_UOPS_OCCUR] : None : Alias to MS_DSB_UOPS:c=1:e=1
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189266
+PMU name : ivb (Intel Ivy Bridge)
+Name     : IDQ_UOPS_NOT_DELIVERED
+Equiv	 : None
+Flags    : None
+Desc     : Uops not delivered
+Code     : 0x9c
+Umask-00 : 0x01 : PMU : [CORE] : [default] : Number of non-delivered uops to RAT (use cmask to qualify further)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189267
+PMU name : ivb (Intel Ivy Bridge)
+Name     : ILD_STALL
+Equiv	 : None
+Flags    : None
+Desc     : Instruction Length Decoder stalls
+Code     : 0x87
+Umask-00 : 0x01 : PMU : [LCP] : None : Stall caused by changing prefix length of the instruction
+Umask-01 : 0x04 : PMU : [IQ_FULL] : None : Stall cycles due to IQ full
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189268
+PMU name : ivb (Intel Ivy Bridge)
+Name     : INST_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Instructions retired
+Code     : 0xc0
+Umask-00 : 0x00 : PMU : [ANY_P] : [default] : Number of instructions retired
+Umask-01 : 0x01 : PMU : [ALL] : [precise] : Precise instruction retired event to reduce effect of PEBS shadow IP distribution (Precise Event)
+Umask-02 : 0x01 : PMU : [PREC_DIST] : [precise] : Alias to ALL
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189269
+PMU name : ivb (Intel Ivy Bridge)
+Name     : INSTRUCTION_RETIRED
+Equiv	 : None
+Flags    : None
+Desc     : Number of instructions at retirement
+Code     : 0xc0
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189270
+PMU name : ivb (Intel Ivy Bridge)
+Name     : INSTRUCTIONS_RETIRED
+Equiv	 : INSTRUCTION_RETIRED
+Flags    : None
+Desc     : This is an alias for INSTRUCTION_RETIRED
+Code     : 0xc0
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189271
+PMU name : ivb (Intel Ivy Bridge)
+Name     : ITLB
+Equiv	 : None
+Flags    : None
+Desc     : Instruction TLB
+Code     : 0xae
+Umask-00 : 0x01 : PMU : [ITLB_FLUSH] : [default] : Number of ITLB flushes, includes 4k/2M/4M pages
+Umask-01 : 0x01 : PMU : [FLUSH] : None : Alias to ITLB_FLUSH
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189272
+PMU name : ivb (Intel Ivy Bridge)
+Name     : ITLB_MISSES
+Equiv	 : None
+Flags    : None
+Desc     : Instruction TLB misses
+Code     : 0x85
+Umask-00 : 0x01 : PMU : [MISS_CAUSES_A_WALK] : None : Miss in all TLB levels that causes a page walk of any page size (4K/2M/4M/1G)
+Umask-01 : 0x01 : PMU : [CAUSES_A_WALK] : None : Alias to MISS_CAUSES_A_WALK
+Umask-02 : 0x10 : PMU : [STLB_HIT] : None : First level miss but second level hit; no page walk. Only relevant if multiple levels
+Umask-03 : 0x02 : PMU : [WALK_COMPLETED] : None : Miss in all TLB levels that causes a page walk that completes of any page size (4K/2M/4M/1G)
+Umask-04 : 0x04 : PMU : [WALK_DURATION] : None : Cycles PMH is busy with this walk
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189273
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L1D
+Equiv	 : None
+Flags    : None
+Desc     : L1D cache
+Code     : 0x51
+Umask-00 : 0x01 : PMU : [REPLACEMENT] : [default] : Number of cache lines brought into the L1D cache
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189274
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MOVE_ELIMINATION
+Equiv	 : None
+Flags    : None
+Desc     : Move Elimination
+Code     : 0x58
+Umask-00 : 0x01 : PMU : [INT_NOT_ELIMINATED] : None : Number of integer Move Elimination candidate uops that were not eliminated
+Umask-01 : 0x02 : PMU : [SIMD_NOT_ELIMINATED] : None : Number of SIMD Move Elimination candidate uops that were not eliminated
+Umask-02 : 0x04 : PMU : [INT_ELIMINATED] : None : Number of integer Move Elimination candidate uops that were eliminated
+Umask-03 : 0x02 : PMU : [SIMD_ELIMINATED] : None : Number of SIMD Move Elimination candidate uops that were eliminated
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189275
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L1D_PEND_MISS
+Equiv	 : None
+Flags    : None
+Desc     : L1D pending misses
+Code     : 0x48
+Umask-00 : 0x10401 : PMU : [OCCURRENCES] : None : Alias to PENDING:e=1:c=1
+Umask-01 : 0x10401 : PMU : [EDGE] : None : Alias to OCCURRENCES
+Umask-02 : 0x01 : PMU : [PENDING] : None : Number of L1D load misses outstanding every cycle
+Umask-03 : 0x10001 : PMU : [PENDING_CYCLES] : None : Alias to PENDING:c=1
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189276
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L2_L1D_WB_RQSTS
+Equiv	 : None
+Flags    : None
+Desc     : Writeback requests from L1D to L2
+Code     : 0x28
+Umask-00 : 0x04 : PMU : [HIT_E] : None : Non rejected writebacks from L1D to L2 cache lines in E state
+Umask-01 : 0x08 : PMU : [HIT_M] : None : Non rejected writebacks from L1D to L2 cache lines in M state
+Umask-02 : 0x01 : PMU : [MISS] : None : Not rejected writebacks that missed LLC
+Umask-03 : 0x0f : PMU : [ALL] : None : Not rejected writebacks from L1D to L2 cache lines in any state
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189277
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L2_LINES_IN
+Equiv	 : None
+Flags    : None
+Desc     : L2 lines alloacated
+Code     : 0xf1
+Umask-00 : 0x07 : PMU : [ANY] : None : Alias to ALL
+Umask-01 : 0x07 : PMU : [ALL] : [default] : L2 cache lines filling (counting does not cover rejects)
+Umask-02 : 0x04 : PMU : [E] : None : L2 cache lines in E state (counting does not cover rejects)
+Umask-03 : 0x01 : PMU : [I] : None : L2 cache lines in I state (counting does not cover rejects)
+Umask-04 : 0x02 : PMU : [S] : None : L2 cache lines in S state (counting does not cover rejects)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189278
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L2_LINES_OUT
+Equiv	 : None
+Flags    : None
+Desc     : L2 lines evicted
+Code     : 0xf2
+Umask-00 : 0x01 : PMU : [DEMAND_CLEAN] : None : L2 clean line evicted by a demand
+Umask-01 : 0x02 : PMU : [DEMAND_DIRTY] : None : L2 dirty line evicted by a demand
+Umask-02 : 0x04 : PMU : [PREFETCH_CLEAN] : None : Alias to PF_CLEAN
+Umask-03 : 0x04 : PMU : [PF_CLEAN] : None : L2 clean line evicted by a prefetch
+Umask-04 : 0x08 : PMU : [PREFETCH_DIRTY] : None : Alias to PF_DIRTY
+Umask-05 : 0x08 : PMU : [PF_DIRTY] : None : L2 dirty line evicted by an MLC Prefetch
+Umask-06 : 0x0a : PMU : [DIRTY_ANY] : None : Alias to DIRTY_ALL
+Umask-07 : 0x0a : PMU : [DIRTY_ALL] : None : Any L2 dirty line evicted (does not cover rejects)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189279
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L2_RQSTS
+Equiv	 : None
+Flags    : None
+Desc     : L2 requests
+Code     : 0x24
+Umask-00 : 0x30 : PMU : [ALL_CODE_RD] : None : Any code request to L2 cache
+Umask-01 : 0x10 : PMU : [CODE_RD_HIT] : None : L2 cache hits when fetching instructions
+Umask-02 : 0x20 : PMU : [CODE_RD_MISS] : None : L2 cache misses when fetching instructions
+Umask-03 : 0x03 : PMU : [ALL_DEMAND_DATA_RD] : None : Demand  data read requests to L2 cache
+Umask-04 : 0x01 : PMU : [DEMAND_DATA_RD_HIT] : None : Demand data read requests that hit L2
+Umask-05 : 0xc0 : PMU : [ALL_PF] : None : Any L2 HW prefetch request to L2 cache
+Umask-06 : 0x40 : PMU : [PF_HIT] : None : Requests from the L2 hardware prefetchers that hit L2 cache
+Umask-07 : 0x80 : PMU : [PF_MISS] : None : Requests from the L2 hardware prefetchers that miss L2 cache
+Umask-08 : 0x0c : PMU : [ALL_RFO] : None : Any RFO requests to L2 cache
+Umask-09 : 0x04 : PMU : [RFO_HIT] : None : Store RFO requests that hit L2 cache
+Umask-10 : 0x08 : PMU : [RFO_MISS] : None : RFO requests that miss L2 cache
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189280
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L2_STORE_LOCK_RQSTS
+Equiv	 : None
+Flags    : None
+Desc     : L2 store lock requests
+Code     : 0x27
+Umask-00 : 0x01 : PMU : [MISS] : None : RFOs that miss cache (I state)
+Umask-01 : 0x08 : PMU : [HIT_M] : None : RFOs that hit cache lines in M state
+Umask-02 : 0x0f : PMU : [ALL] : [default] : RFOs that access cache lines in any state
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189281
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L2_TRANS
+Equiv	 : None
+Flags    : None
+Desc     : L2 transactions
+Code     : 0xf0
+Umask-00 : 0x80 : PMU : [ALL] : [default] : Transactions accessing the L2 pipe
+Umask-01 : 0x04 : PMU : [CODE_RD] : None : L2 cache accesses when fetching instructions
+Umask-02 : 0x10 : PMU : [L1D_WB] : None : L1D writebacks that access the L2 cache
+Umask-03 : 0x01 : PMU : [DMND_DATA_RD] : None : Demand Data Read requests that access the L2 cache
+Umask-04 : 0x20 : PMU : [L2_FILL] : None : L2 fill requests that access the L2 cache
+Umask-05 : 0x40 : PMU : [L2_WB] : None : L2 writebacks that access the L2 cache
+Umask-06 : 0x08 : PMU : [ALL_PREFETCH] : None : Alias to ALL_PF
+Umask-07 : 0x08 : PMU : [ALL_PF] : None : L2 or L3 HW prefetches that access the L2 cache (including rejects)
+Umask-08 : 0x02 : PMU : [RFO] : None : RFO requests that access the L2 cache
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189282
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LAST_LEVEL_CACHE_MISSES
+Equiv	 : L3_LAT_CACHE:MISS
+Flags    : None
+Desc     : This is an alias for LLC_MISSES
+Code     : 0x412e
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189283
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LLC_MISSES
+Equiv	 : LAST_LEVEL_CACHE_MISSES
+Flags    : None
+Desc     : Alias for LAST_LEVEL_CACHE_MISSES
+Code     : 0x412e
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189284
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LAST_LEVEL_CACHE_REFERENCES
+Equiv	 : L3_LAT_CACHE:REFERENCE
+Flags    : None
+Desc     : This is an alias for LLC_REFERENCES
+Code     : 0x4f2e
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189285
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LLC_REFERENCES
+Equiv	 : LAST_LEVEL_CACHE_REFERENCES
+Flags    : None
+Desc     : Alias for LAST_LEVEL_CACHE_REFERENCES
+Code     : 0x4f2e
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189286
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LD_BLOCKS
+Equiv	 : None
+Flags    : None
+Desc     : Blocking loads
+Code     : 0x3
+Umask-00 : 0x02 : PMU : [STORE_FORWARD] : [default] : Loads blocked by overlapping with store buffer that cannot be forwarded
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189287
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LD_BLOCKS_PARTIAL
+Equiv	 : None
+Flags    : None
+Desc     : Partial load blocks
+Code     : 0x7
+Umask-00 : 0x01 : PMU : [ADDRESS_ALIAS] : [default] : False dependencies in MOB due to partial compare on address
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189288
+PMU name : ivb (Intel Ivy Bridge)
+Name     : LOAD_HIT_PRE
+Equiv	 : None
+Flags    : None
+Desc     : Load dispatches that hit fill buffer
+Code     : 0x4c
+Umask-00 : 0x02 : PMU : [HW_PF] : None : Non sw-prefetch load dispatches that hit the fill buffer allocated for HW prefetch
+Umask-01 : 0x01 : PMU : [SW_PF] : None : Non sw-prefetch load dispatches that hit the fill buffer allocated for SW prefetch
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189289
+PMU name : ivb (Intel Ivy Bridge)
+Name     : L3_LAT_CACHE
+Equiv	 : None
+Flags    : None
+Desc     : Core-originated cacheable demand requests to L3
+Code     : 0x2e
+Umask-00 : 0x41 : PMU : [MISS] : None : Core-originated cacheable demand requests missed L3
+Umask-01 : 0x4f : PMU : [REFERENCE] : None : Core-originated cacheable demand requests that refer to L3
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189290
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MACHINE_CLEARS
+Equiv	 : None
+Flags    : None
+Desc     : Machine clear asserted
+Code     : 0xc3
+Umask-00 : 0x20 : PMU : [MASKMOV] : None : The number of executed Intel AVX masked load operations that refer to an illegal address range with the mask bits set to 0
+Umask-01 : 0x02 : PMU : [MEMORY_ORDERING] : None : Number of Memory Ordering Machine Clears detected
+Umask-02 : 0x04 : PMU : [SMC] : None : Self-Modifying Code detected
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189291
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_LOAD_UOPS_LLC_HIT_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : L3 hit loads uops retired
+Code     : 0xd2
+Umask-00 : 0x02 : PMU : [XSNP_HIT] : [precise] : Load LLC Hit and a cross-core Snoop hits in on-pkg core cache (Precise Event)
+Umask-01 : 0x04 : PMU : [XSNP_HITM] : [precise] : Load had HitM Response from a core on same socket (shared LLC) (Precise Event)
+Umask-02 : 0x01 : PMU : [XSNP_MISS] : [precise] : Load LLC Hit and a cross-core Snoop missed in on-pkg core cache (Precise Event)
+Umask-03 : 0x08 : PMU : [XSNP_NONE] : [precise] : Load hit in last-level (L3) cache with no snoop needed (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189292
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_LOAD_LLC_HIT_RETIRED
+Equiv	 : MEM_LOAD_UOPS_LLC_HIT_RETIRED
+Flags    : [precise] 
+Desc     : L3 hit loads uops retired (deprecated use MEM_LOAD_UOPS_LLC_HIT_RETIRED)
+Code     : 0xd2
+Umask-00 : 0x02 : PMU : [XSNP_HIT] : [precise] : Load LLC Hit and a cross-core Snoop hits in on-pkg core cache (Precise Event)
+Umask-01 : 0x04 : PMU : [XSNP_HITM] : [precise] : Load had HitM Response from a core on same socket (shared LLC) (Precise Event)
+Umask-02 : 0x01 : PMU : [XSNP_MISS] : [precise] : Load LLC Hit and a cross-core Snoop missed in on-pkg core cache (Precise Event)
+Umask-03 : 0x08 : PMU : [XSNP_NONE] : [precise] : Load hit in last-level (L3) cache with no snoop needed (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189293
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_LOAD_UOPS_LLC_MISS_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Load uops retired that missed the LLC
+Code     : 0xd3
+Umask-00 : 0x01 : PMU : [LOCAL_DRAM] : [default] [precise] : Number of retired load uops that missed L3 but were service by local RAM (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189294
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_LOAD_UOPS_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Memory loads uops retired
+Code     : 0xd1
+Umask-00 : 0x40 : PMU : [HIT_LFB] : [precise] : A load missed L1D but hit the Fill Buffer (Precise Event)
+Umask-01 : 0x01 : PMU : [L1_HIT] : [precise] : Load hit in nearest-level (L1D) cache (Precise Event)
+Umask-02 : 0x02 : PMU : [L2_HIT] : [precise] : Load hit in mid-level (L2) cache (Precise Event)
+Umask-03 : 0x04 : PMU : [L3_HIT] : [precise] : Load hit in last-level (L3) cache with no snoop needed (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189295
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_LOAD_RETIRED
+Equiv	 : MEM_LOAD_UOPS_RETIRED
+Flags    : [precise] 
+Desc     : Memory loads uops retired (deprecated use MEM_LOAD_UOPS_RETIRED)
+Code     : 0xd1
+Umask-00 : 0x40 : PMU : [HIT_LFB] : [precise] : A load missed L1D but hit the Fill Buffer (Precise Event)
+Umask-01 : 0x01 : PMU : [L1_HIT] : [precise] : Load hit in nearest-level (L1D) cache (Precise Event)
+Umask-02 : 0x02 : PMU : [L2_HIT] : [precise] : Load hit in mid-level (L2) cache (Precise Event)
+Umask-03 : 0x04 : PMU : [L3_HIT] : [precise] : Load hit in last-level (L3) cache with no snoop needed (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189296
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_TRANS_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Memory transactions retired
+Code     : 0xcd
+Umask-00 : 0x01 : PMU : [LATENCY_ABOVE_THRESHOLD] : [precise] : Memory load instructions retired above programmed clocks, minimum threshold value is 3 (Precise Event and ldlat required)
+Umask-01 : 0x02 : PMU : [PRECISE_STORE] : [precise] : Capture where stores occur, must use with PEBS (Precise Event required)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+Modif-06 : 0x06 : PMU : [ldlat] : load latency threshold (cycles, [3-65535]) (integer)
+#-----------------------------
+IDX	 : 155189297
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_UOPS_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Memory uops retired
+Code     : 0xd0
+Umask-00 : 0x81 : PMU : [ALL_LOADS] : [precise] : Any retired loads (Precise Event)
+Umask-01 : 0x81 : PMU : [ANY_LOADS] : [precise] : Alias to ALL_LOADS
+Umask-02 : 0x82 : PMU : [ALL_STORES] : [precise] : Any retired stores (Precise Event)
+Umask-03 : 0x21 : PMU : [LOCK_LOADS] : [precise] : Locked retired loads (Precise Event)
+Umask-04 : 0x82 : PMU : [ANY_STORES] : [precise] : Alias to ALL_STORES
+Umask-05 : 0x41 : PMU : [SPLIT_LOADS] : [precise] : Retired loads causing cacheline splits (Precise Event)
+Umask-06 : 0x42 : PMU : [SPLIT_STORES] : [precise] : Retired stores causing cacheline splits (Precise Event)
+Umask-07 : 0x11 : PMU : [STLB_MISS_LOADS] : [precise] : STLB misses dues to retired loads (Precise Event)
+Umask-08 : 0x12 : PMU : [STLB_MISS_STORES] : [precise] : STLB misses dues to retired stores (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189298
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MEM_UOP_RETIRED
+Equiv	 : MEM_UOPS_RETIRED
+Flags    : [precise] 
+Desc     : Memory uops retired (deprecated use MEM_UOPS_RETIRED)
+Code     : 0xd0
+Umask-00 : 0x81 : PMU : [ALL_LOADS] : [precise] : Any retired loads (Precise Event)
+Umask-01 : 0x81 : PMU : [ANY_LOADS] : [precise] : Alias to ALL_LOADS
+Umask-02 : 0x82 : PMU : [ALL_STORES] : [precise] : Any retired stores (Precise Event)
+Umask-03 : 0x21 : PMU : [LOCK_LOADS] : [precise] : Locked retired loads (Precise Event)
+Umask-04 : 0x82 : PMU : [ANY_STORES] : [precise] : Alias to ALL_STORES
+Umask-05 : 0x41 : PMU : [SPLIT_LOADS] : [precise] : Retired loads causing cacheline splits (Precise Event)
+Umask-06 : 0x42 : PMU : [SPLIT_STORES] : [precise] : Retired stores causing cacheline splits (Precise Event)
+Umask-07 : 0x11 : PMU : [STLB_MISS_LOADS] : [precise] : STLB misses dues to retired loads (Precise Event)
+Umask-08 : 0x12 : PMU : [STLB_MISS_STORES] : [precise] : STLB misses dues to retired stores (Precise Event)
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189299
+PMU name : ivb (Intel Ivy Bridge)
+Name     : MISALIGN_MEM_REF
+Equiv	 : None
+Flags    : None
+Desc     : Misaligned memory references
+Code     : 0x5
+Umask-00 : 0x01 : PMU : [LOADS] : None : Speculative cache-line split load uops dispatched to the L1D
+Umask-01 : 0x02 : PMU : [STORES] : None : Speculative cache-line split Store-address uops dispatched to L1D
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189300
+PMU name : ivb (Intel Ivy Bridge)
+Name     : OFFCORE_REQUESTS
+Equiv	 : None
+Flags    : None
+Desc     : Offcore requests
+Code     : 0xb0
+Umask-00 : 0x08 : PMU : [ALL_DATA_RD] : None : Demand and prefetch read requests sent to uncore
+Umask-01 : 0x08 : PMU : [ALL_DATA_READ] : None : Alias to ALL_DATA_RD
+Umask-02 : 0x02 : PMU : [DEMAND_CODE_RD] : None : Offcore code read requests, including cacheable and un-cacheables
+Umask-03 : 0x01 : PMU : [DEMAND_DATA_RD] : None : Demand Data Read requests sent to uncore
+Umask-04 : 0x04 : PMU : [DEMAND_RFO] : None : Offcore Demand RFOs, includes regular RFO, Locks, ItoM
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189301
+PMU name : ivb (Intel Ivy Bridge)
+Name     : OFFCORE_REQUESTS_OUTSTANDING
+Equiv	 : None
+Flags    : None
+Desc     : Outstanding offcore requests
+Code     : 0x60
+Umask-00 : 0x10008 : PMU : [ALL_DATA_RD_CYCLES] : None : Alias to ALL_DATA_RD:c=1
+Umask-01 : 0x10002 : PMU : [DEMAND_CODE_RD_CYCLES] : None : Alias to DEMAND_CODE_RD:c=1
+Umask-02 : 0x10001 : PMU : [DEMAND_DATA_RD_CYCLES] : None : Alias to DEMAND_DATA_RD:c=1
+Umask-03 : 0x08 : PMU : [ALL_DATA_RD] : None : Cacheable data read transactions in the superQ every cycle
+Umask-04 : 0x02 : PMU : [DEMAND_CODE_RD] : None : Code read transactions in the superQ every cycle
+Umask-05 : 0x01 : PMU : [DEMAND_DATA_RD] : None : Demand data read transactions in the superQ every cycle
+Umask-06 : 0x04 : PMU : [DEMAND_RFO] : None : Outstanding RFO (store) transactions in the superQ every cycle
+Umask-07 : 0x10004 : PMU : [DEMAND_RFO_CYCLES] : None : Alias to DEMAND_RFO:c=1
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189302
+PMU name : ivb (Intel Ivy Bridge)
+Name     : OTHER_ASSISTS
+Equiv	 : None
+Flags    : None
+Desc     : Count hardware assists
+Code     : 0xc1
+Umask-00 : 0x10 : PMU : [AVX_TO_SSE] : None : Number of transitions from AVX-256 to legacy SSE when penalty applicable
+Umask-01 : 0x20 : PMU : [SSE_TO_AVX] : None : Number of transitions from legacy SSE to AVX-256 when penalty applicable
+Umask-02 : 0x08 : PMU : [AVX_STORE] : None : Number of assists associated with 25-bit AVX stores
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189303
+PMU name : ivb (Intel Ivy Bridge)
+Name     : RESOURCE_STALLS
+Equiv	 : None
+Flags    : None
+Desc     : Resource related stall cycles
+Code     : 0xa2
+Umask-00 : 0x01 : PMU : [ANY] : [default] : Cycles stalled due to Resource Related reason
+Umask-01 : 0x04 : PMU : [RS] : None : Cycles stalled due to no eligible RS entry available
+Umask-02 : 0x08 : PMU : [SB] : None : Cycles stalled due to no store buffers available (not including draining from sync)
+Umask-03 : 0x10 : PMU : [ROB] : None : Cycles stalled due to re-order buffer full
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189304
+PMU name : ivb (Intel Ivy Bridge)
+Name     : CYCLE_ACTIVITY
+Equiv	 : None
+Flags    : None
+Desc     : Stalled cycles
+Code     : 0xa3
+Umask-00 : 0x10001 : PMU : [CYCLES_L2_PENDING] : None : Cycles with pending L2 miss loads
+Umask-01 : 0x20002 : PMU : [CYCLES_LDM_PENDING] : None : Cycles with pending memory loads
+Umask-02 : 0x80008 : PMU : [CYCLES_L1D_PENDING] : None : Cycles with pending L1D load cache misses
+Umask-03 : 0x40004 : PMU : [CYCLES_NO_EXECUTE] : None : Cycles of dispatch stalls
+Umask-04 : 0x50005 : PMU : [STALLS_L2_PENDING] : None : Execution stalls due to L2 pending loads
+Umask-05 : 0xc000c : PMU : [STALLS_L1D_PENDING] : None : Execution stalls due to L1D pending loads
+Umask-06 : 0x60006 : PMU : [STALLS_LDM_PENDING] : None : Execution stalls due to memory loads
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189305
+PMU name : ivb (Intel Ivy Bridge)
+Name     : ROB_MISC_EVENTS
+Equiv	 : None
+Flags    : None
+Desc     : Reorder buffer events
+Code     : 0xcc
+Umask-00 : 0x20 : PMU : [LBR_INSERTS] : [default] : Count each time an new LBR record is saved by HW
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189306
+PMU name : ivb (Intel Ivy Bridge)
+Name     : RS_EVENTS
+Equiv	 : None
+Flags    : None
+Desc     : Reservation station events
+Code     : 0x5e
+Umask-00 : 0x01 : PMU : [EMPTY_CYCLES] : [default] : Cycles the RS is empty for this thread
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189307
+PMU name : ivb (Intel Ivy Bridge)
+Name     : TLB_ACCESS
+Equiv	 : None
+Flags    : None
+Desc     : TLB access
+Code     : 0x5f
+Umask-00 : 0x04 : PMU : [LOAD_STLB_HIT] : [default] : Number of load operations that missed L1TLN but hit L2TLB
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189308
+PMU name : ivb (Intel Ivy Bridge)
+Name     : TLB_FLUSH
+Equiv	 : None
+Flags    : None
+Desc     : TLB flushes
+Code     : 0xbd
+Umask-00 : 0x01 : PMU : [DTLB_THREAD] : None : Number of DTLB flushes of thread-specific entries
+Umask-01 : 0x20 : PMU : [STLB_ANY] : [default] : Number of STLB flushes
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189309
+PMU name : ivb (Intel Ivy Bridge)
+Name     : UNHALTED_CORE_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : Count core clock cycles whenever the clock signal on the specific core is running (not halted)
+Code     : 0x3c
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189310
+PMU name : ivb (Intel Ivy Bridge)
+Name     : UNHALTED_REFERENCE_CYCLES
+Equiv	 : None
+Flags    : None
+Desc     : Unhalted reference cycles
+Code     : 0x300
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189311
+PMU name : ivb (Intel Ivy Bridge)
+Name     : UOPS_EXECUTED
+Equiv	 : None
+Flags    : None
+Desc     : Uops executed
+Code     : 0xb1
+Umask-00 : 0x02 : PMU : [CORE] : [default] : Counts total number of uops executed from any thread per cycle
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189312
+PMU name : ivb (Intel Ivy Bridge)
+Name     : UOPS_DISPATCHED_PORT
+Equiv	 : None
+Flags    : None
+Desc     : Uops dispatch to specific ports
+Code     : 0xa1
+Umask-00 : 0x01 : PMU : [PORT_0] : None : Cycles which a Uop is dispatched on port 0
+Umask-01 : 0x02 : PMU : [PORT_1] : None : Cycles which a Uop is dispatched on port 1
+Umask-02 : 0x0c : PMU : [PORT_2] : None : Cycles in which a uop is dispatched on port 2
+Umask-03 : 0x30 : PMU : [PORT_3] : None : Cycles in which a uop is disptached on port 3
+Umask-04 : 0x40 : PMU : [PORT_4] : None : Cycles which a uop is dispatched on port 4
+Umask-05 : 0x80 : PMU : [PORT_5] : None : Cycles which a Uop is dispatched on port 5
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189313
+PMU name : ivb (Intel Ivy Bridge)
+Name     : UOPS_ISSUED
+Equiv	 : None
+Flags    : None
+Desc     : Uops issued
+Code     : 0xe
+Umask-00 : 0x01 : PMU : [ANY] : [default] : Number of uops issued by the RAT to the Reservation Station (RS)
+Umask-01 : 0x1a001 : PMU : [CORE_STALL_CYCLES] : None : Alias to ANY:c=1:i=1:t=1
+Umask-02 : 0x18001 : PMU : [STALL_CYCLES] : None : Alias to ANY:c=1:i=1
+Umask-03 : 0x10 : PMU : [FLAGS_MERGE] : None : Number of flags-merge uops allocated. Such uops adds delay
+Umask-04 : 0x20 : PMU : [SLOW_LEA] : None : Number of slow LEA or similar uops allocated
+Umask-05 : 0x40 : PMU : [SINGLE_MUL] : None : Number of multiply packed/scalar single precision uops allocated
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189314
+PMU name : ivb (Intel Ivy Bridge)
+Name     : UOPS_RETIRED
+Equiv	 : None
+Flags    : [precise] 
+Desc     : Uops retired
+Code     : 0xc2
+Umask-00 : 0x01 : PMU : [ALL] : [default] [precise] : All uops that actually retired (Precise Event)
+Umask-01 : 0x01 : PMU : [ANY] : [precise] : Alias to ALL
+Umask-02 : 0x02 : PMU : [RETIRE_SLOTS] : [precise] : Number of retirement slots used (Precise Event)
+Umask-03 : 0x18001 : PMU : [STALL_CYCLES] : [precise] : Alias to ALL:c=1:i=1
+Umask-04 : 0x100001 : PMU : [TOTAL_CYCLES] : [precise] : Alias to ALL:c=16
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189315
+PMU name : ivb (Intel Ivy Bridge)
+Name     : OFFCORE_RESPONSE_0
+Equiv	 : None
+Flags    : None
+Desc     : Offcore response event (must provide at least one request type and either any_response or any combination of supplier + snoop)
+Code     : 0x1b7
+Umask-00 : 0x01 : PMU : [DMND_DATA_RD] : None : Request: number of demand and DCU prefetch data reads of full and partial cachelines as well as demand data page table entry cacheline reads. Does not count L2 data read prefetches or instruction fetches
+Umask-01 : 0x02 : PMU : [DMND_RFO] : None : Request: number of demand and DCU prefetch reads for ownership (RFO) requests generated by a write to data cacheline. Does not count L2 RFO prefetches
+Umask-02 : 0x04 : PMU : [DMND_IFETCH] : None : Request: number of demand and DCU prefetch instruction cacheline reads. Does not count L2 code read prefetches
+Umask-03 : 0x08 : PMU : [WB] : None : Request: number of writebacks (modified to exclusive) transactions
+Umask-04 : 0x10 : PMU : [PF_DATA_RD] : None : Request: number of data cacheline reads generated by L2 prefetchers
+Umask-05 : 0x20 : PMU : [PF_RFO] : None : Request: number of RFO requests generated by L2 prefetchers
+Umask-06 : 0x40 : PMU : [PF_IFETCH] : None : Request: number of code reads generated by L2 prefetchers
+Umask-07 : 0x80 : PMU : [PF_LLC_DATA_RD] : None : Request: number of L3 prefetcher requests to L2 for loads
+Umask-08 : 0x100 : PMU : [PF_LLC_RFO] : None : Request: number of RFO requests generated by L2 prefetcher
+Umask-09 : 0x200 : PMU : [PF_LLC_IFETCH] : None : Request: number of L2 prefetcher requests to L3 for instruction fetches
+Umask-10 : 0x400 : PMU : [BUS_LOCKS] : None : Request: number bus lock and split lock requests
+Umask-11 : 0x800 : PMU : [STRM_ST] : None : Request: number of streaming store requests
+Umask-12 : 0x8000 : PMU : [OTHER] : None : Request: counts one of the following transaction types, including L3 invalidate, I/O, full or partial writes, WC or non-temporal stores, CLFLUSH, Fences, lock, unlock, split lock
+Umask-13 : 0x241 : PMU : [ANY_IFETCH] : None : Alias to PF_IFETCH:DMND_IFETCH:PF_LLC_IFETCH
+Umask-14 : 0x8fff : PMU : [ANY_REQUEST] : [default] : Alias to DMND_DATA_RD:DMND_RFO:DMND_IFETCH:WB:PF_DATA_RD:PF_RFO:PF_IFETCH:PF_LLC_DATA_RD:PF_LLC_RFO:PF_LLC_IFETCH:BUS_LOCKS:STRM_ST:OTHER
+Umask-15 : 0x91 : PMU : [ANY_DATA] : None : Alias to DMND_DATA_RD:PF_DATA_RD:PF_LLC_DATA_RD
+Umask-16 : 0x103 : PMU : [ANY_RFO] : None : Alias to DMND_RFO:PF_RFO:PF_LLC_RFO
+Umask-17 : 0x10000 : PMU : [ANY_RESPONSE] : [default] : Response: count any response type
+Umask-18 : 0x20000 : PMU : [NO_SUPP] : None : Supplier: counts number of times supplier information is not available
+Umask-19 : 0x40000 : PMU : [LLC_HITM] : None : Supplier: counts L3 hits in M-state (initial lookup)
+Umask-20 : 0x80000 : PMU : [LLC_HITE] : None : Supplier: counts L3 hits in E-state
+Umask-21 : 0x100000 : PMU : [LLC_HITS] : None : Supplier: counts L3 hits in S-state
+Umask-22 : 0x200000 : PMU : [LLC_HITF] : None : Supplier: counts L3 hits in F-state
+Umask-23 : 0x400000 : PMU : [LLC_MISS_LOCAL] : None : Supplier: counts L3 misses to local DRAM
+Umask-24 : 0x3c0000 : PMU : [LLC_HITMESF] : None : Alias to LLC_HITM:LLC_HITE:LLC_HITS:LLC_HITF
+Umask-25 : 0x80000000 : PMU : [SNP_NONE] : None : Snoop: counts number of times no snoop-related information is available
+Umask-26 : 0x100000000 : PMU : [SNP_NOT_NEEDED] : None : Snoop: counts the number of times no snoop was needed to satisfy the request
+Umask-27 : 0x200000000 : PMU : [SNP_MISS] : None : Snoop: counts number of times a snoop was needed and it missed all snooped caches
+Umask-28 : 0x400000000 : PMU : [SNP_NO_FWD] : None : Snoop: counts number of times a snoop was needed and it hit in at leas one snooped cache
+Umask-29 : 0x800000000 : PMU : [SNP_FWD] : None : Snoop: counts number of times a snoop was needed and data was forwarded from a remote socket
+Umask-30 : 0x1000000000 : PMU : [HITM] : None : Snoop: counts number of times a snoop was needed and it hitM-ed in local or remote cache
+Umask-31 : 0x2000000000 : PMU : [NON_DRAM] : None : Snoop:  counts number of times target was a non-DRAM system address. This includes MMIO transactions
+Umask-32 : 0x3f80000000 : PMU : [SNP_ANY] : [default] : Alias to SNP_NONE:SNP_NOT_NEEDED:SNP_MISS:SNP_NO_FWD:SNP_FWD:HITM:NON_DRAM
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
+#-----------------------------
+IDX	 : 155189316
+PMU name : ivb (Intel Ivy Bridge)
+Name     : OFFCORE_RESPONSE_1
+Equiv	 : None
+Flags    : None
+Desc     : Offcore response event (must provide at least one request type and either any_response or any combination of supplier + snoop)
+Code     : 0x1bb
+Umask-00 : 0x01 : PMU : [DMND_DATA_RD] : None : Request: number of demand and DCU prefetch data reads of full and partial cachelines as well as demand data page table entry cacheline reads. Does not count L2 data read prefetches or instruction fetches
+Umask-01 : 0x02 : PMU : [DMND_RFO] : None : Request: number of demand and DCU prefetch reads for ownership (RFO) requests generated by a write to data cacheline. Does not count L2 RFO prefetches
+Umask-02 : 0x04 : PMU : [DMND_IFETCH] : None : Request: number of demand and DCU prefetch instruction cacheline reads. Does not count L2 code read prefetches
+Umask-03 : 0x08 : PMU : [WB] : None : Request: number of writebacks (modified to exclusive) transactions
+Umask-04 : 0x10 : PMU : [PF_DATA_RD] : None : Request: number of data cacheline reads generated by L2 prefetchers
+Umask-05 : 0x20 : PMU : [PF_RFO] : None : Request: number of RFO requests generated by L2 prefetchers
+Umask-06 : 0x40 : PMU : [PF_IFETCH] : None : Request: number of code reads generated by L2 prefetchers
+Umask-07 : 0x80 : PMU : [PF_LLC_DATA_RD] : None : Request: number of L3 prefetcher requests to L2 for loads
+Umask-08 : 0x100 : PMU : [PF_LLC_RFO] : None : Request: number of RFO requests generated by L2 prefetcher
+Umask-09 : 0x200 : PMU : [PF_LLC_IFETCH] : None : Request: number of L2 prefetcher requests to L3 for instruction fetches
+Umask-10 : 0x400 : PMU : [BUS_LOCKS] : None : Request: number bus lock and split lock requests
+Umask-11 : 0x800 : PMU : [STRM_ST] : None : Request: number of streaming store requests
+Umask-12 : 0x8000 : PMU : [OTHER] : None : Request: counts one of the following transaction types, including L3 invalidate, I/O, full or partial writes, WC or non-temporal stores, CLFLUSH, Fences, lock, unlock, split lock
+Umask-13 : 0x241 : PMU : [ANY_IFETCH] : None : Alias to PF_IFETCH:DMND_IFETCH:PF_LLC_IFETCH
+Umask-14 : 0x8fff : PMU : [ANY_REQUEST] : [default] : Alias to DMND_DATA_RD:DMND_RFO:DMND_IFETCH:WB:PF_DATA_RD:PF_RFO:PF_IFETCH:PF_LLC_DATA_RD:PF_LLC_RFO:PF_LLC_IFETCH:BUS_LOCKS:STRM_ST:OTHER
+Umask-15 : 0x91 : PMU : [ANY_DATA] : None : Alias to DMND_DATA_RD:PF_DATA_RD:PF_LLC_DATA_RD
+Umask-16 : 0x103 : PMU : [ANY_RFO] : None : Alias to DMND_RFO:PF_RFO:PF_LLC_RFO
+Umask-17 : 0x10000 : PMU : [ANY_RESPONSE] : [default] : Response: count any response type
+Umask-18 : 0x20000 : PMU : [NO_SUPP] : None : Supplier: counts number of times supplier information is not available
+Umask-19 : 0x40000 : PMU : [LLC_HITM] : None : Supplier: counts L3 hits in M-state (initial lookup)
+Umask-20 : 0x80000 : PMU : [LLC_HITE] : None : Supplier: counts L3 hits in E-state
+Umask-21 : 0x100000 : PMU : [LLC_HITS] : None : Supplier: counts L3 hits in S-state
+Umask-22 : 0x200000 : PMU : [LLC_HITF] : None : Supplier: counts L3 hits in F-state
+Umask-23 : 0x400000 : PMU : [LLC_MISS_LOCAL] : None : Supplier: counts L3 misses to local DRAM
+Umask-24 : 0x3c0000 : PMU : [LLC_HITMESF] : None : Alias to LLC_HITM:LLC_HITE:LLC_HITS:LLC_HITF
+Umask-25 : 0x80000000 : PMU : [SNP_NONE] : None : Snoop: counts number of times no snoop-related information is available
+Umask-26 : 0x100000000 : PMU : [SNP_NOT_NEEDED] : None : Snoop: counts the number of times no snoop was needed to satisfy the request
+Umask-27 : 0x200000000 : PMU : [SNP_MISS] : None : Snoop: counts number of times a snoop was needed and it missed all snooped caches
+Umask-28 : 0x400000000 : PMU : [SNP_NO_FWD] : None : Snoop: counts number of times a snoop was needed and it hit in at leas one snooped cache
+Umask-29 : 0x800000000 : PMU : [SNP_FWD] : None : Snoop: counts number of times a snoop was needed and data was forwarded from a remote socket
+Umask-30 : 0x1000000000 : PMU : [HITM] : None : Snoop: counts number of times a snoop was needed and it hitM-ed in local or remote cache
+Umask-31 : 0x2000000000 : PMU : [NON_DRAM] : None : Snoop:  counts number of times target was a non-DRAM system address. This includes MMIO transactions
+Umask-32 : 0x3f80000000 : PMU : [SNP_ANY] : [default] : Alias to SNP_NONE:SNP_NOT_NEEDED:SNP_MISS:SNP_NO_FWD:SNP_FWD:HITM:NON_DRAM
+Modif-00 : 0x00 : PMU : [k] : monitor at priv level 0 (boolean)
+Modif-01 : 0x01 : PMU : [u] : monitor at priv level 1, 2, 3 (boolean)
+Modif-02 : 0x02 : PMU : [e] : edge level (may require counter-mask >= 1) (boolean)
+Modif-03 : 0x03 : PMU : [i] : invert (boolean)
+Modif-04 : 0x04 : PMU : [c] : counter-mask in range [0-255] (integer)
+Modif-05 : 0x05 : PMU : [t] : measure any thread (boolean)
