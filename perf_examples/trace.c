@@ -33,6 +33,8 @@
 #include <locale.h>
 #include <err.h>
 
+#include <sched.h>
+
 #include "perf_util.h"
 
 #define MAX_GROUPS 16
@@ -153,6 +155,7 @@ print_counts(perf_event_desc_t *fds, int num)
 
 	read_groups(fds, num);
 
+    printf ("--------------------------------\n");
 	for(i=0; i < num; i++) {
 
 		val   = perf_scale(fds[i].values);
@@ -167,7 +170,7 @@ print_counts(perf_event_desc_t *fds, int num)
         
         /* instruction counts */
         if (i == 0) {
-            printf ("#instruction - %"PRIu64"\n", val);
+            printf ("#number of instruction - %"PRIu64"\n", val);
             s_instructions = delta;
         }
         else if (i == 1) {
@@ -210,6 +213,7 @@ print_counts(perf_event_desc_t *fds, int num)
     s_ipc = n_ipc;
     /* State Machine */
     printf("#state - %d\n\n", app_state);
+    printf ("--------------------------------\n\n");
 }
 
 static void sig_handler(int n)
@@ -266,6 +270,12 @@ parent(char **arg)
 		 * the events.
 		 */
 		if (pid == 0) {
+
+            cpu_set_t cmask;
+            CPU_ZERO (&cmask);
+            CPU_SET (0, &cmask);
+            sched_setaffinity (pid, sizeof(cpu_set_t), &cmask);
+
 			close(ready[0]);
 			close(go[1]);
 

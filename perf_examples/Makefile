@@ -54,8 +54,8 @@ LPC_UTILS_HDR=perf_util.h
 TARGETS+=self self_basic self_count task task_attach_timeout syst \
 	notify_self notify_group task_smpl self_smpl_multi \
 	self_pipe syst_count task_cpu syst_smpl evt2raw \
-	trace corun
-# applications added: trace corun
+	trace corun_smt corun_cmp
+# applications added: trace corun_smt corun_cmp
 
 EXAMPLESDIR=$(DOCDIR)/perf_examples
 

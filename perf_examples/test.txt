@@ -1,0 +1,843 @@
+--------------------------------
+thread #0: number of instruction - 1672984318
+	instructions: 1672984318
+	cycles: 3664898579
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 195
+	iTLB-load-misses: 6
+	MISPREDICTED_BRANCH_RETIRED: 2950
+	L1-icache-load-misses: 36978
+	MEM_LOAD_RETIRED:L1_HIT: 646030253
+	MEM_LOAD_RETIRED:L2_HIT: 135777
+	MEM_LOAD_RETIRED:L3_HIT: 2342
+	LLC_MISSES: 12
+thread #0: state - 3 (ipc - 0.456489)
+
+thread #1: number of instruction - 2145010956
+	instructions: 2145010956
+	cycles: 3665430932
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 216
+	iTLB-load-misses: 39
+	MISPREDICTED_BRANCH_RETIRED: 2685
+	L1-icache-load-misses: 42148
+	MEM_LOAD_RETIRED:L1_HIT: 646392458
+	MEM_LOAD_RETIRED:L2_HIT: 161755
+	MEM_LOAD_RETIRED:L3_HIT: 3550
+	LLC_MISSES: 295
+thread #1: state - 3 (ipc - 0.585200)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 3356486630
+	instructions: 1683561829
+	cycles: 3687905465
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 80
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1659
+	L1-icache-load-misses: 31856
+	MEM_LOAD_RETIRED:L1_HIT: 646069121
+	MEM_LOAD_RETIRED:L2_HIT: 162615
+	MEM_LOAD_RETIRED:L3_HIT: 2302
+	LLC_MISSES: 63
+thread #0: state - 2 (ipc - 0.456509)
+
+thread #1: number of instruction - 4303718814
+	instructions: 2158780261
+	cycles: 3687819388
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 181
+	iTLB-load-misses: 11
+	MISPREDICTED_BRANCH_RETIRED: 1945
+	L1-icache-load-misses: 44486
+	MEM_LOAD_RETIRED:L1_HIT: 646255849
+	MEM_LOAD_RETIRED:L2_HIT: 198371
+	MEM_LOAD_RETIRED:L3_HIT: 4183
+	LLC_MISSES: 520
+thread #1: state - 2 (ipc - 0.585381)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 5039964598
+	instructions: 1683491668
+	cycles: 3687885125
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 108
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 1794
+	L1-icache-load-misses: 34185
+	MEM_LOAD_RETIRED:L1_HIT: 645787469
+	MEM_LOAD_RETIRED:L2_HIT: 416562
+	MEM_LOAD_RETIRED:L3_HIT: 2144
+	LLC_MISSES: 26
+thread #0: state - 1 (ipc - 0.456492)
+
+thread #1: number of instruction - 6462481781
+	instructions: 2158779434
+	cycles: 3687938671
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 280
+	iTLB-load-misses: 9
+	MISPREDICTED_BRANCH_RETIRED: 1996
+	L1-icache-load-misses: 47311
+	MEM_LOAD_RETIRED:L1_HIT: 646161268
+	MEM_LOAD_RETIRED:L2_HIT: 401707
+	MEM_LOAD_RETIRED:L3_HIT: 4152
+	LLC_MISSES: 599
+thread #1: state - 1 (ipc - 0.585362)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 6723507936
+	instructions: 1683527496
+	cycles: 3688015152
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 75
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1923
+	L1-icache-load-misses: 33601
+	MEM_LOAD_RETIRED:L1_HIT: 645712158
+	MEM_LOAD_RETIRED:L2_HIT: 499336
+	MEM_LOAD_RETIRED:L3_HIT: 2094
+	LLC_MISSES: 18
+thread #0: state - 0 (ipc - 0.456486)
+
+thread #1: number of instruction - 8622399737
+	instructions: 2159892637
+	cycles: 3688019456
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 159
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1671
+	L1-icache-load-misses: 40030
+	MEM_LOAD_RETIRED:L1_HIT: 646184145
+	MEM_LOAD_RETIRED:L2_HIT: 457611
+	MEM_LOAD_RETIRED:L3_HIT: 3475
+	LLC_MISSES: 334
+thread #1: state - 0 (ipc - 0.585651)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 8407045164
+	instructions: 1683549893
+	cycles: 3687940908
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 68
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1654
+	L1-icache-load-misses: 31458
+	MEM_LOAD_RETIRED:L1_HIT: 645896982
+	MEM_LOAD_RETIRED:L2_HIT: 302751
+	MEM_LOAD_RETIRED:L3_HIT: 2406
+	LLC_MISSES: 174
+thread #0: state - 0 (ipc - 0.456501)
+
+thread #1: number of instruction - 10781234186
+	instructions: 2158848946
+	cycles: 3687956463
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 199
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1609
+	L1-icache-load-misses: 38154
+	MEM_LOAD_RETIRED:L1_HIT: 646487136
+	MEM_LOAD_RETIRED:L2_HIT: 311823
+	MEM_LOAD_RETIRED:L3_HIT: 4012
+	LLC_MISSES: 436
+thread #1: state - 0 (ipc - 0.585378)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 10090680344
+	instructions: 1683639574
+	cycles: 3687846049
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 93
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1803
+	L1-icache-load-misses: 31955
+	MEM_LOAD_RETIRED:L1_HIT: 646014901
+	MEM_LOAD_RETIRED:L2_HIT: 192315
+	MEM_LOAD_RETIRED:L3_HIT: 2244
+	LLC_MISSES: 122
+thread #0: state - 0 (ipc - 0.456537)
+
+thread #1: number of instruction - 12940678042
+	instructions: 2159449851
+	cycles: 3687881199
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 108
+	iTLB-load-misses: 6
+	MISPREDICTED_BRANCH_RETIRED: 1743
+	L1-icache-load-misses: 39268
+	MEM_LOAD_RETIRED:L1_HIT: 646449601
+	MEM_LOAD_RETIRED:L2_HIT: 217148
+	MEM_LOAD_RETIRED:L3_HIT: 3491
+	LLC_MISSES: 498
+thread #1: state - 0 (ipc - 0.585553)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 11774414687
+	instructions: 1683725122
+	cycles: 3687949613
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 141
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 1676
+	L1-icache-load-misses: 30669
+	MEM_LOAD_RETIRED:L1_HIT: 646140837
+	MEM_LOAD_RETIRED:L2_HIT: 123720
+	MEM_LOAD_RETIRED:L3_HIT: 1736
+	LLC_MISSES: 48
+thread #0: state - 0 (ipc - 0.456548)
+
+thread #1: number of instruction - 15100285822
+	instructions: 2159594641
+	cycles: 3687958154
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 312
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 2637
+	L1-icache-load-misses: 50233
+	MEM_LOAD_RETIRED:L1_HIT: 646750582
+	MEM_LOAD_RETIRED:L2_HIT: 142851
+	MEM_LOAD_RETIRED:L3_HIT: 3161
+	LLC_MISSES: 177
+thread #1: state - 0 (ipc - 0.585580)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 13458116001
+	instructions: 1683708518
+	cycles: 3687973136
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 113
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1422
+	L1-icache-load-misses: 28326
+	MEM_LOAD_RETIRED:L1_HIT: 646198628
+	MEM_LOAD_RETIRED:L2_HIT: 72578
+	MEM_LOAD_RETIRED:L3_HIT: 1409
+	LLC_MISSES: 21
+thread #0: state - 0 (ipc - 0.456540)
+
+thread #1: number of instruction - 17259177045
+	instructions: 2158898511
+	cycles: 3687923091
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 220
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1733
+	L1-icache-load-misses: 40895
+	MEM_LOAD_RETIRED:L1_HIT: 646719474
+	MEM_LOAD_RETIRED:L2_HIT: 80923
+	MEM_LOAD_RETIRED:L3_HIT: 2819
+	LLC_MISSES: 69
+thread #1: state - 0 (ipc - 0.585397)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 15141685046
+	instructions: 1683570689
+	cycles: 3687904032
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 78
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1776
+	L1-icache-load-misses: 31045
+	MEM_LOAD_RETIRED:L1_HIT: 646146649
+	MEM_LOAD_RETIRED:L2_HIT: 76264
+	MEM_LOAD_RETIRED:L3_HIT: 2072
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456512)
+
+thread #1: number of instruction - 19418570668
+	instructions: 2159396120
+	cycles: 3687944759
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 126
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1598
+	L1-icache-load-misses: 40790
+	MEM_LOAD_RETIRED:L1_HIT: 646699741
+	MEM_LOAD_RETIRED:L2_HIT: 87912
+	MEM_LOAD_RETIRED:L3_HIT: 3231
+	LLC_MISSES: 77
+thread #1: state - 0 (ipc - 0.585528)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 16825378088
+	instructions: 1683687257
+	cycles: 3687945162
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 120
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1639
+	L1-icache-load-misses: 30961
+	MEM_LOAD_RETIRED:L1_HIT: 646192019
+	MEM_LOAD_RETIRED:L2_HIT: 74700
+	MEM_LOAD_RETIRED:L3_HIT: 2049
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456538)
+
+thread #1: number of instruction - 21577637264
+	instructions: 2159060107
+	cycles: 3687884863
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 204
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 1870
+	L1-icache-load-misses: 43593
+	MEM_LOAD_RETIRED:L1_HIT: 646568612
+	MEM_LOAD_RETIRED:L2_HIT: 88161
+	MEM_LOAD_RETIRED:L3_HIT: 3086
+	LLC_MISSES: 253
+thread #1: state - 0 (ipc - 0.585447)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 18509071101
+	instructions: 1683697975
+	cycles: 3687919916
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 122
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1560
+	L1-icache-load-misses: 29071
+	MEM_LOAD_RETIRED:L1_HIT: 646150244
+	MEM_LOAD_RETIRED:L2_HIT: 76880
+	MEM_LOAD_RETIRED:L3_HIT: 1742
+	LLC_MISSES: 6
+thread #0: state - 0 (ipc - 0.456544)
+
+thread #1: number of instruction - 23736565933
+	instructions: 2158933500
+	cycles: 3687935737
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 205
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1671
+	L1-icache-load-misses: 40364
+	MEM_LOAD_RETIRED:L1_HIT: 646730630
+	MEM_LOAD_RETIRED:L2_HIT: 86893
+	MEM_LOAD_RETIRED:L3_HIT: 3289
+	LLC_MISSES: 204
+thread #1: state - 0 (ipc - 0.585404)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 20192531578
+	instructions: 1683461150
+	cycles: 3687877709
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 554
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 3788
+	L1-icache-load-misses: 44730
+	MEM_LOAD_RETIRED:L1_HIT: 646155291
+	MEM_LOAD_RETIRED:L2_HIT: 68876
+	MEM_LOAD_RETIRED:L3_HIT: 2408
+	LLC_MISSES: 14
+thread #0: state - 0 (ipc - 0.456485)
+
+thread #1: number of instruction - 25895332297
+	instructions: 2158767019
+	cycles: 3687935596
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 337
+	iTLB-load-misses: 12
+	MISPREDICTED_BRANCH_RETIRED: 2372
+	L1-icache-load-misses: 47916
+	MEM_LOAD_RETIRED:L1_HIT: 646510775
+	MEM_LOAD_RETIRED:L2_HIT: 79024
+	MEM_LOAD_RETIRED:L3_HIT: 4099
+	LLC_MISSES: 531
+thread #1: state - 0 (ipc - 0.585359)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 21876239181
+	instructions: 1683703691
+	cycles: 3688025341
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 129
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 1650
+	L1-icache-load-misses: 32967
+	MEM_LOAD_RETIRED:L1_HIT: 646154489
+	MEM_LOAD_RETIRED:L2_HIT: 73570
+	MEM_LOAD_RETIRED:L3_HIT: 2112
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456533)
+
+thread #1: number of instruction - 28055108359
+	instructions: 2159769117
+	cycles: 3687986364
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 159
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1797
+	L1-icache-load-misses: 42089
+	MEM_LOAD_RETIRED:L1_HIT: 646615143
+	MEM_LOAD_RETIRED:L2_HIT: 82316
+	MEM_LOAD_RETIRED:L3_HIT: 3285
+	LLC_MISSES: 153
+thread #1: state - 0 (ipc - 0.585623)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 23559721539
+	instructions: 1683485421
+	cycles: 3687859639
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 80
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1732
+	L1-icache-load-misses: 32493
+	MEM_LOAD_RETIRED:L1_HIT: 646155912
+	MEM_LOAD_RETIRED:L2_HIT: 73872
+	MEM_LOAD_RETIRED:L3_HIT: 2008
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456494)
+
+thread #1: number of instruction - 30213368978
+	instructions: 2158261493
+	cycles: 3687818944
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 292
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 2236
+	L1-icache-load-misses: 48939
+	MEM_LOAD_RETIRED:L1_HIT: 646450860
+	MEM_LOAD_RETIRED:L2_HIT: 86216
+	MEM_LOAD_RETIRED:L3_HIT: 4089
+	LLC_MISSES: 1125
+thread #1: state - 0 (ipc - 0.585241)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 25243269157
+	instructions: 1683547783
+	cycles: 3687933939
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 87
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1608
+	L1-icache-load-misses: 31272
+	MEM_LOAD_RETIRED:L1_HIT: 646166234
+	MEM_LOAD_RETIRED:L2_HIT: 76628
+	MEM_LOAD_RETIRED:L3_HIT: 1913
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456502)
+
+thread #1: number of instruction - 32372094131
+	instructions: 2158725195
+	cycles: 3687961966
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 228
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 2264
+	L1-icache-load-misses: 42399
+	MEM_LOAD_RETIRED:L1_HIT: 646639098
+	MEM_LOAD_RETIRED:L2_HIT: 90209
+	MEM_LOAD_RETIRED:L3_HIT: 3282
+	LLC_MISSES: 158
+thread #1: state - 0 (ipc - 0.585344)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 26926929585
+	instructions: 1683657761
+	cycles: 3688025859
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 74
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1598
+	L1-icache-load-misses: 29756
+	MEM_LOAD_RETIRED:L1_HIT: 646185313
+	MEM_LOAD_RETIRED:L2_HIT: 74365
+	MEM_LOAD_RETIRED:L3_HIT: 1904
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456520)
+
+thread #1: number of instruction - 34531125693
+	instructions: 2159028587
+	cycles: 3688009396
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 89
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1505
+	L1-icache-load-misses: 37499
+	MEM_LOAD_RETIRED:L1_HIT: 646613569
+	MEM_LOAD_RETIRED:L2_HIT: 85008
+	MEM_LOAD_RETIRED:L3_HIT: 2821
+	LLC_MISSES: 72
+thread #1: state - 0 (ipc - 0.585418)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 28610610299
+	instructions: 1683683898
+	cycles: 3687966915
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 83
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1637
+	L1-icache-load-misses: 31124
+	MEM_LOAD_RETIRED:L1_HIT: 646136732
+	MEM_LOAD_RETIRED:L2_HIT: 75987
+	MEM_LOAD_RETIRED:L3_HIT: 2220
+	LLC_MISSES: 3
+thread #0: state - 0 (ipc - 0.456534)
+
+thread #1: number of instruction - 36689542209
+	instructions: 2158417356
+	cycles: 3687939363
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 307
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1712
+	L1-icache-load-misses: 44304
+	MEM_LOAD_RETIRED:L1_HIT: 646569280
+	MEM_LOAD_RETIRED:L2_HIT: 88150
+	MEM_LOAD_RETIRED:L3_HIT: 3744
+	LLC_MISSES: 252
+thread #1: state - 0 (ipc - 0.585264)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 30294121424
+	instructions: 1683510927
+	cycles: 3687802711
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 105
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1773
+	L1-icache-load-misses: 32351
+	MEM_LOAD_RETIRED:L1_HIT: 646141055
+	MEM_LOAD_RETIRED:L2_HIT: 73876
+	MEM_LOAD_RETIRED:L3_HIT: 2473
+	LLC_MISSES: 20
+thread #0: state - 0 (ipc - 0.456508)
+
+thread #1: number of instruction - 38847999476
+	instructions: 2158457145
+	cycles: 3687848562
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 162
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1692
+	L1-icache-load-misses: 40059
+	MEM_LOAD_RETIRED:L1_HIT: 646676301
+	MEM_LOAD_RETIRED:L2_HIT: 83704
+	MEM_LOAD_RETIRED:L3_HIT: 3066
+	LLC_MISSES: 80
+thread #1: state - 0 (ipc - 0.585289)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 31977558302
+	instructions: 1683435553
+	cycles: 3688003666
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 101
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1645
+	L1-icache-load-misses: 30875
+	MEM_LOAD_RETIRED:L1_HIT: 646173615
+	MEM_LOAD_RETIRED:L2_HIT: 77233
+	MEM_LOAD_RETIRED:L3_HIT: 1968
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456463)
+
+thread #1: number of instruction - 41006349860
+	instructions: 2158350085
+	cycles: 3687985805
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 134
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1555
+	L1-icache-load-misses: 40910
+	MEM_LOAD_RETIRED:L1_HIT: 646611725
+	MEM_LOAD_RETIRED:L2_HIT: 88708
+	MEM_LOAD_RETIRED:L3_HIT: 2923
+	LLC_MISSES: 111
+thread #1: state - 0 (ipc - 0.585238)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 33661243602
+	instructions: 1683687964
+	cycles: 3687970609
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 56
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1542
+	L1-icache-load-misses: 30717
+	MEM_LOAD_RETIRED:L1_HIT: 646140254
+	MEM_LOAD_RETIRED:L2_HIT: 71867
+	MEM_LOAD_RETIRED:L3_HIT: 2180
+	LLC_MISSES: 5
+thread #0: state - 0 (ipc - 0.456535)
+
+thread #1: number of instruction - 43165173533
+	instructions: 2158826069
+	cycles: 3687946125
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 188
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1856
+	L1-icache-load-misses: 43436
+	MEM_LOAD_RETIRED:L1_HIT: 646360764
+	MEM_LOAD_RETIRED:L2_HIT: 83592
+	MEM_LOAD_RETIRED:L3_HIT: 3347
+	LLC_MISSES: 242
+thread #1: state - 0 (ipc - 0.585374)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 35344766416
+	instructions: 1683522400
+	cycles: 3687919344
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 72
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1812
+	L1-icache-load-misses: 32367
+	MEM_LOAD_RETIRED:L1_HIT: 646215880
+	MEM_LOAD_RETIRED:L2_HIT: 74868
+	MEM_LOAD_RETIRED:L3_HIT: 1978
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456497)
+
+thread #1: number of instruction - 45323741481
+	instructions: 2158567688
+	cycles: 3687978540
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 153
+	iTLB-load-misses: 6
+	MISPREDICTED_BRANCH_RETIRED: 1490
+	L1-icache-load-misses: 38964
+	MEM_LOAD_RETIRED:L1_HIT: 646653074
+	MEM_LOAD_RETIRED:L2_HIT: 86947
+	MEM_LOAD_RETIRED:L3_HIT: 3492
+	LLC_MISSES: 427
+thread #1: state - 0 (ipc - 0.585298)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 37028440574
+	instructions: 1683672642
+	cycles: 3687967023
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 65
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1626
+	L1-icache-load-misses: 30243
+	MEM_LOAD_RETIRED:L1_HIT: 646089993
+	MEM_LOAD_RETIRED:L2_HIT: 72834
+	MEM_LOAD_RETIRED:L3_HIT: 1968
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456531)
+
+thread #1: number of instruction - 47482629766
+	instructions: 2158886711
+	cycles: 3687918948
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 80
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1599
+	L1-icache-load-misses: 39082
+	MEM_LOAD_RETIRED:L1_HIT: 646391664
+	MEM_LOAD_RETIRED:L2_HIT: 84099
+	MEM_LOAD_RETIRED:L3_HIT: 3197
+	LLC_MISSES: 117
+thread #1: state - 0 (ipc - 0.585394)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 38712084732
+	instructions: 1683646372
+	cycles: 3687922108
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 68
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1603
+	L1-icache-load-misses: 30819
+	MEM_LOAD_RETIRED:L1_HIT: 646124776
+	MEM_LOAD_RETIRED:L2_HIT: 75684
+	MEM_LOAD_RETIRED:L3_HIT: 2248
+	LLC_MISSES: 2
+thread #0: state - 0 (ipc - 0.456530)
+
+thread #1: number of instruction - 49641756150
+	instructions: 2159129780
+	cycles: 3687925803
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 107
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1546
+	L1-icache-load-misses: 37774
+	MEM_LOAD_RETIRED:L1_HIT: 646546682
+	MEM_LOAD_RETIRED:L2_HIT: 84258
+	MEM_LOAD_RETIRED:L3_HIT: 3338
+	LLC_MISSES: 176
+thread #1: state - 0 (ipc - 0.585459)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 40395736440
+	instructions: 1683650907
+	cycles: 3687998602
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 48
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1635
+	L1-icache-load-misses: 28568
+	MEM_LOAD_RETIRED:L1_HIT: 646204663
+	MEM_LOAD_RETIRED:L2_HIT: 73220
+	MEM_LOAD_RETIRED:L3_HIT: 2177
+	LLC_MISSES: 2
+thread #0: state - 0 (ipc - 0.456522)
+
+thread #1: number of instruction - 51800469971
+	instructions: 2158713246
+	cycles: 3687949782
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 123
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 1502
+	L1-icache-load-misses: 37934
+	MEM_LOAD_RETIRED:L1_HIT: 646400737
+	MEM_LOAD_RETIRED:L2_HIT: 83622
+	MEM_LOAD_RETIRED:L3_HIT: 3363
+	LLC_MISSES: 146
+thread #1: state - 0 (ipc - 0.585342)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 42079374045
+	instructions: 1683636643
+	cycles: 3687981682
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 92
+	iTLB-load-misses: 5
+	MISPREDICTED_BRANCH_RETIRED: 1742
+	L1-icache-load-misses: 31725
+	MEM_LOAD_RETIRED:L1_HIT: 646120871
+	MEM_LOAD_RETIRED:L2_HIT: 71271
+	MEM_LOAD_RETIRED:L3_HIT: 1986
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456520)
+
+thread #1: number of instruction - 53958997539
+	instructions: 2158527281
+	cycles: 3687977876
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 143
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1577
+	L1-icache-load-misses: 42273
+	MEM_LOAD_RETIRED:L1_HIT: 646331971
+	MEM_LOAD_RETIRED:L2_HIT: 80199
+	MEM_LOAD_RETIRED:L3_HIT: 3381
+	LLC_MISSES: 39
+thread #1: state - 0 (ipc - 0.585287)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 43762440117
+	instructions: 1683067997
+	cycles: 3686611386
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 128
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1877
+	L1-icache-load-misses: 30682
+	MEM_LOAD_RETIRED:L1_HIT: 645811157
+	MEM_LOAD_RETIRED:L2_HIT: 184845
+	MEM_LOAD_RETIRED:L3_HIT: 2213
+	LLC_MISSES: 47
+thread #0: state - 0 (ipc - 0.456535)
+
+thread #1: number of instruction - 56118005485
+	instructions: 2159010685
+	cycles: 3687877413
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 131
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1622
+	L1-icache-load-misses: 38589
+	MEM_LOAD_RETIRED:L1_HIT: 646502031
+	MEM_LOAD_RETIRED:L2_HIT: 200814
+	MEM_LOAD_RETIRED:L3_HIT: 3768
+	LLC_MISSES: 179
+thread #1: state - 0 (ipc - 0.585435)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 45445790247
+	instructions: 1683349820
+	cycles: 3687834701
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 96
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1698
+	L1-icache-load-misses: 31272
+	MEM_LOAD_RETIRED:L1_HIT: 645729523
+	MEM_LOAD_RETIRED:L2_HIT: 486475
+	MEM_LOAD_RETIRED:L3_HIT: 2420
+	LLC_MISSES: 17
+thread #0: state - 0 (ipc - 0.456460)
+
+thread #1: number of instruction - 58277204971
+	instructions: 2159197789
+	cycles: 3687950683
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 165
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1593
+	L1-icache-load-misses: 38912
+	MEM_LOAD_RETIRED:L1_HIT: 646317904
+	MEM_LOAD_RETIRED:L2_HIT: 452294
+	MEM_LOAD_RETIRED:L3_HIT: 3691
+	LLC_MISSES: 155
+thread #1: state - 0 (ipc - 0.585474)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 47129464281
+	instructions: 1683673420
+	cycles: 3688025922
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 56
+	iTLB-load-misses: 5
+	MISPREDICTED_BRANCH_RETIRED: 1675
+	L1-icache-load-misses: 30659
+	MEM_LOAD_RETIRED:L1_HIT: 645719336
+	MEM_LOAD_RETIRED:L2_HIT: 499036
+	MEM_LOAD_RETIRED:L3_HIT: 1907
+	LLC_MISSES: 0
+thread #0: state - 0 (ipc - 0.456524)
+
+thread #1: number of instruction - 60436621779
+	instructions: 2159415426
+	cycles: 3687990692
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 194
+	iTLB-load-misses: 2
+	MISPREDICTED_BRANCH_RETIRED: 1732
+	L1-icache-load-misses: 40320
+	MEM_LOAD_RETIRED:L1_HIT: 646568248
+	MEM_LOAD_RETIRED:L2_HIT: 461748
+	MEM_LOAD_RETIRED:L3_HIT: 2881
+	LLC_MISSES: 51
+thread #1: state - 0 (ipc - 0.585526)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 48813047422
+	instructions: 1683584705
+	cycles: 3687937697
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 53
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1736
+	L1-icache-load-misses: 29288
+	MEM_LOAD_RETIRED:L1_HIT: 645636737
+	MEM_LOAD_RETIRED:L2_HIT: 503975
+	MEM_LOAD_RETIRED:L3_HIT: 2335
+	LLC_MISSES: 2
+thread #0: state - 0 (ipc - 0.456511)
+
+thread #1: number of instruction - 62596453140
+	instructions: 2159837026
+	cycles: 3687953292
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 56
+	iTLB-load-misses: 0
+	MISPREDICTED_BRANCH_RETIRED: 1371
+	L1-icache-load-misses: 34736
+	MEM_LOAD_RETIRED:L1_HIT: 646018960
+	MEM_LOAD_RETIRED:L2_HIT: 462451
+	MEM_LOAD_RETIRED:L3_HIT: 3508
+	LLC_MISSES: 143
+thread #1: state - 0 (ipc - 0.585647)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 50496545005
+	instructions: 1683496761
+	cycles: 3687871626
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 102
+	iTLB-load-misses: 3
+	MISPREDICTED_BRANCH_RETIRED: 1848
+	L1-icache-load-misses: 30444
+	MEM_LOAD_RETIRED:L1_HIT: 645718850
+	MEM_LOAD_RETIRED:L2_HIT: 499671
+	MEM_LOAD_RETIRED:L3_HIT: 2800
+	LLC_MISSES: 35
+thread #0: state - 0 (ipc - 0.456495)
+
+thread #1: number of instruction - 64755249472
+	instructions: 2158795405
+	cycles: 3687854065
+	DTLB_LOAD_MISSES:MISS_CAUSES_A_WALK: 216
+	iTLB-load-misses: 9
+	MISPREDICTED_BRANCH_RETIRED: 2156
+	L1-icache-load-misses: 46845
+	MEM_LOAD_RETIRED:L1_HIT: 646539188
+	MEM_LOAD_RETIRED:L2_HIT: 466509
+	MEM_LOAD_RETIRED:L3_HIT: 3748
+	LLC_MISSES: 77
+thread #1: state - 0 (ipc - 0.585380)
+
+--------------------------------
+--------------------------------
+thread #0: number of instruction - 52180132885
+	instructi
